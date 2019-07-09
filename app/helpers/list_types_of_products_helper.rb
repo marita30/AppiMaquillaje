@@ -1,0 +1,2 @@
+module ListTypesOfProductsHelper
+end
