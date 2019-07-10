@@ -12,6 +12,8 @@ class ListTypesOfProductsController < ApplicationController
         @eyeshadow_categories = []
         @foundation_categories = []
         @lip_liner_categories = []
+        @lipstick_categories = []
+        @mascara_categories = []
         response = RestClient.get 'http://makeup-api.herokuapp.com/api/v1/products.json? '
         # para desahacer el texto plano
         @array = JSON.parse(response.body)
@@ -39,6 +41,12 @@ class ListTypesOfProductsController < ApplicationController
             elsif value['product_type'] == 'lip_liner'
                 @lip_liner_categories << value['category'] 
 
+            elsif value['product_type'] == 'lipstick'
+                @lipstick_categories << value['category'] 
+
+            elsif value['product_type'] == 'mascara'
+                @mascara_categories << value['category'] 
+
 
             end
 
@@ -51,6 +59,8 @@ class ListTypesOfProductsController < ApplicationController
         @eyeshadow_categories =  @eyeshadow_categories.uniq { |category| category }.reject(&:blank?)
         @foundation_categories =  @foundation_categories.uniq { |category| category }.reject(&:blank?)
         @lip_liner_categories =  @lip_liner_categories.uniq { |category| category }.reject(&:blank?)
+        @lipstick_categories =  @lipstick_categories.uniq { |category| category }.reject(&:blank?)
+        @mascara_categories =  @mascara_categories.uniq { |category| category }.reject(&:blank?)
        
         binding.pry
         
