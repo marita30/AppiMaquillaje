@@ -1,3 +1,11 @@
-<p>Esto es una prueba</p>
+<% if @blush_categories %> 
+ <% @blush_categories.each do |category| %>
+<%= category %>
+ <%end%>
+<%end%>
 
-
+<% if @bronzer_categories %> 
+ <% @bronzer_categories.each do |category| %>
+<%= category %>
+ <%end%>
+<%end%>

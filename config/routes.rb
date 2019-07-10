@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  get '/types', to: 'list_types_of_products#show'
+
+  get '/types', to: 'list_types_of_products#index'
+
+  get '/category/Blush', to: 'list_types_of_products#show'
+  get '/category/Bronzer', to: 'list_types_of_products#show'
+
 end

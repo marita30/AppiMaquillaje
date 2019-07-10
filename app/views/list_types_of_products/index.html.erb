@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MakeUp</title>
+
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+
+
+<p>Welcome to API of MakeUp</p>
+
+
+<div class="card w-50">
+  <div class="card-body">
+    <h5 class="card-title">---Blush---</h5>
+    <p class="card-text">Para darle color a tu cara.</p>
+    <%= link_to "Category", category_Blush_path(:type => "blush"), :class => 'btn btn-primary' %>
+  </div>
+</div>
+
+<div class="card w-50">
+  <div class="card-body">
+    <h5 class="card-title">---Bronzer---</h5>
+    <p class="card-text">Para darle contor a tu cara.</p>
+    <%= link_to "Category", category_Bronzer_path(:type => "bronzer"), :class => 'btn btn-primary' %>
+  </div>
+</div>
+
+<div class="card w-50">
+  <div class="card-body">
+    <h5 class="card-title">---Eyebrow---</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <a href="/category/Eyebrow" class="btn btn-primary">Categoria</a> 
+  </div>
+</div>
+
+<div class="card w-50">
+  <div class="card-body">
+    <h5 class="card-title">---Eyeliner---</h5>
+    <p class="card-text">Un toque realmente hermoso , hacen que tus ojos tenga una mirada increible</p>
+    <a href="/category/Eyeliner" class="btn btn-primary">Categoria</a>
+  </div>
+</div>
+
+
+
+</body>
+  </html>
+
+
+
+
+
+
+
