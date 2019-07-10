@@ -11,7 +11,9 @@ class ListTypesOfProductsController < ApplicationController
 
     
  def show 
+    # Para traer el params
     value = params["type"]
+    
     @blush_categories = []
     @bronzer_categories = []
     @eyebrow_categories = []
@@ -21,6 +23,7 @@ class ListTypesOfProductsController < ApplicationController
     @lip_liner_categories = []
     @lipstick_categories = []
     @mascara_categories = []
+    # Haciendo dinamica la url (con paramtros)
     response = RestClient.get "http://makeup-api.herokuapp.com/api/v1/products.json?product_type=#{value}"
     # para desahacer el texto plano
     @array = JSON.parse(response.body)
