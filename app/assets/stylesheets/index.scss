@@ -1,0 +1,52 @@
+body {
+    // background-image:image-url("maquillaje2.png");
+    // background-image: linear-gradient(#ffe4e1, #e3f7f0);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(to right, #ff6e7f 0%, #bfe9ff 51%, #ff6e7f 100%)
+}
+
+body:hover { 
+    background-position: right center; 
+}
+
+
+
+p {
+    font-family: verdana, arial, helvetica, sans-serif;
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+    color: blueviolet;
+
+}
+
+.card-body1{
+    
+    border-color:  chocolate; 
+    border-style: double;
+    border-radius: 8px;
+    background-image: linear-gradient(#ffe4e1, #e3f7f0);
+    
+    
+  
+}
+
+.card-body2 {
+
+    border-color:  midnightblue; 
+    border-style: double;
+    border-radius: 8px;
+    background-image: linear-gradient(#ffe4e1, #e3f7f0);
+    
+
+}
+
+.card-body3 {
+    border-color: olive;
+    border-style: double;
+    border-radius: 8px;
+    background-image: linear-gradient(#ffe4e1, #e3f7f0);
+
+}
+
