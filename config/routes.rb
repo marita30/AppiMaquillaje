@@ -13,7 +13,8 @@ Rails.application.routes.draw do
 
 # rutas para el otro metodo.
   get '/type/blush/category', to: 'products_expensive_and_cheap#index'
-  get '/type/blush/category', to: 'products_expensive_and_cheap#index'
+  get '/type/bronzer/category', to: 'products_expensive_and_cheap#index'
+  get '/type/eyebrow/category', to: 'products_expensive_and_cheap#index'
   
 
 end

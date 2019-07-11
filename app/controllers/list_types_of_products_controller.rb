@@ -11,7 +11,7 @@ class ListTypesOfProductsController < ApplicationController
 
     
  def show 
-    # Para traer el params
+    # Para traer el params de la url response.
     value = params["type"]
     
     @blush_categories = []
@@ -61,6 +61,7 @@ class ListTypesOfProductsController < ApplicationController
         end
 
     end
+    # Para hacer el valor unico , que no se repita y eliminar los valores nill o nulo.
     
     @blush_categories =  @blush_categories.uniq { |category| category }.reject(&:blank?)
     @bronzer_categories =  @bronzer_categories.uniq { |category| category }.reject(&:blank?)

@@ -8,7 +8,6 @@ class ProductsExpensiveAndCheapController < ApplicationController
         @type = params["type"]
         @category =params["category"]
 
-        # Class.list_types_of_products.show
        
     end
 

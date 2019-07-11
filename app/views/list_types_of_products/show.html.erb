@@ -24,7 +24,14 @@
 
         <% if @bronzer_categories %> 
         <% @bronzer_categories.each do |category| %>
-        <%= category %>
+        <%
+=begin%>
+ <%= category %>  asi es como estaba antes , lo nuevo es hacerlo dinamico para que 
+ lo pueda leer la otra clase y vista products_expensive_and_cheap.
+<%
+=end%>
+        <%= link_to category, type_bronzer_category_path(:type => "bronzer", :category => category), :class => 'btn btn-primary' %>
+
          <%end%>
         <%end%>
     
@@ -32,7 +39,7 @@
 
     <% if @eyebrow_categories %> 
  <% @eyebrow_categories.each do |category| %>
-<%= category %>
+<%= link_to category, type_eyebrow_category_path(:type => "eyebrow", :category => category), :class => 'btn btn-primary' %>
  <%end%>
 <%end%>
  
