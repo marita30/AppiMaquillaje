@@ -13,53 +13,62 @@
 
 
 
-<div class="card w-40">
-  <div class="card-body">
-    <center><h5 class="card-title">---BlushCategories---</h5></center>
-    <center>
+
         <% if @blush_categories %> 
         <% @blush_categories.each do |category| %>
         <%= category %>
         <%end%>
         <%end%>
-    </center>
-  </div>
-</div>
+    
 
-<div class="card w-40">
-  <div class="card-body">
-    <center><h5 class="card-title">---BronzerCategories---</h5></center>
-    <center>
+
         <% if @bronzer_categories %> 
         <% @bronzer_categories.each do |category| %>
         <%= category %>
          <%end%>
         <%end%>
-    </center>
-  </div>
-</div>
+    
 
-<div class="card w-40">
-  <div class="card-body">
-    <h5 class="card-title">---EyebrowCategories---</h5>
+
     <% if @eyebrow_categories %> 
  <% @eyebrow_categories.each do |category| %>
 <%= category %>
  <%end%>
 <%end%>
-  </div>
-</div>
+ 
 
-<div class="card w-40">
-  <div class="card-body">
-    <h5 class="card-title">---EyeLinerCategories---</h5>
-    <% if @eyebrow_categories %> 
+
+    <% if @eyeliner_categories %> 
  <% @eyeliner_categories.each do |category| %>
 <%= category %>
  <%end%>
 <%end%>
-  </div>
-</div>
+
+ <% if @eyeshadow_categories %> 
+ <% @eyeshadow_categories.each do |category| %>
+<%= category %>
+ <%end%>
+<%end%>
+
+<% if @foundation_categories %> 
+ <% @foundation_categories.each do |category| %>
+<%= category %>
+ <%end%>
+<%end%>
+
+
+<% if @lip_liner_categories %> 
+ <% @lip_liner_categories.each do |category| %>
+<%= category %>
+ <%end%>
+<%end%>
+
+
+<% if @mascara_categories %> 
+ <% @mascara_categories.each do |category| %>
+<%= category %>
+ <%end%>
+<%end%>
 
 
 </body>
