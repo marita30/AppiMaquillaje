@@ -13,13 +13,35 @@ body:hover {
 
 
 p {
-    font-family: verdana, arial, helvetica, sans-serif;
+    font-family: 'Muli', sans-serif;
     font-size: 25px;
     text-align: center;
     font-weight: bold;
     color: blueviolet;
 
 }
+
+h4, h5{
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px -7px 0;
+    color:black;
+
+}
+
+a.btn.btn-primary{
+    background-image: linear-gradient(hsla(338, 100%, 94%, 0.431), rgb(192, 192, 192));
+    color: black;
+    border-bottom-style: double;
+    
+}
+  
+  
+  
+
 
 .card-body1{
     
@@ -50,3 +72,46 @@ p {
 
 }
 
+
+.card-body4 {
+    border-color: orange;
+    border-style: double;
+    border-radius: 8px;
+    background-image: linear-gradient(#ffe4e1, #e3f7f0);
+
+}
+
+
+.card-body5 {
+    border-color: teal;
+    border-style: double;
+    border-radius: 8px;
+    background-image: linear-gradient(#ffe4e1, #e3f7f0);
+
+}
+
+.card-body6 {
+    border-color: red;
+    border-style: double;
+    border-radius: 8px;
+    background-image: linear-gradient(#ffe4e1, #e3f7f0);
+
+}
+
+
+.card-body7 {
+    border-color: seagreen;
+    border-style: double;
+    border-radius: 8px;
+    background-image: linear-gradient(#ffe4e1, #e3f7f0);
+
+}
+
+
+.card-body8 {
+    border-color: darkturquoise;
+    border-style: double;
+    border-radius: 8px;
+    background-image: linear-gradient(#ffe4e1, #e3f7f0);
+
+}
