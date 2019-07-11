@@ -11,7 +11,9 @@ Rails.application.routes.draw do
   get '/category/LipLiner', to: 'list_types_of_products#show'
   get '/category/Mascara', to: 'list_types_of_products#show'
 
-# esta ruta es para los productos mas caros y mas baratos.
-  get '/categoryPrice', to: 'products_expensive_and_cheap#index'
+# rutas para el otro metodo.
+  get '/type/blush/category', to: 'products_expensive_and_cheap#index'
+  get '/type/blush/category', to: 'products_expensive_and_cheap#index'
+  
 
 end

@@ -16,7 +16,7 @@
 
         <% if @blush_categories %> 
         <% @blush_categories.each do |category| %>
-        <%= category %>
+       <%= link_to category, type_blush_category_path(:type => "blush", :category => category), :class => 'btn btn-primary' %>
         <%end%>
         <%end%>
     
