@@ -1,0 +1,2 @@
+class ProductsExpensiveAndCheapController < ApplicationController
+end
