@@ -47,33 +47,33 @@
 
     <% if @eyeliner_categories %> 
  <% @eyeliner_categories.each do |category| %>
-<%= category %>
+<%= link_to category, type_eyeliner_category_path(:type => "eyeliner", :category => category), :class => 'btn btn-primary' %>
  <%end%>
 <%end%>
 
  <% if @eyeshadow_categories %> 
  <% @eyeshadow_categories.each do |category| %>
-<%= category %>
+<%= link_to category, type_eyeshadow_category_path(:type => "eyeshadow", :category => category), :class => 'btn btn-primary' %>
  <%end%>
 <%end%>
 
 <% if @foundation_categories %> 
  <% @foundation_categories.each do |category| %>
-<%= category %>
+<%= link_to category, type_foundation_category_path(:type => "foundation", :category => category), :class => 'btn btn-primary' %>
  <%end%>
 <%end%>
 
 
 <% if @lip_liner_categories %> 
  <% @lip_liner_categories.each do |category| %>
-<%= category %>
+<%= link_to category, type_lipliner_category_path(:type => "lip_liner", :category => category), :class => 'btn btn-primary' %>
  <%end%>
 <%end%>
 
 
 <% if @mascara_categories %> 
  <% @mascara_categories.each do |category| %>
-<%= category %>
+<%= link_to category, type_mascara_category_path(:type => "mascara", :category => category), :class => 'btn btn-primary' %>
  <%end%>
 <%end%>
 
