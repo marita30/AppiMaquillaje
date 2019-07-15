@@ -163,7 +163,14 @@
 			content: '';
 			content: none;
 		}
-	}
+    }
+    
+    h1{
+        color:black;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        text-transform: capitalize;
+     
+    }
 
 
 	body {
@@ -182,7 +189,8 @@
 		-webkit-appearance: none;
 		-ms-appearance: none;
 		appearance: none;
-	}
+    }
+    
 
 /* Basic */
 
@@ -660,8 +668,16 @@
 		header.major,
 		footer.major {
 			background: _palette(bg);
-		}
-	}
+        }
+    
+    }
+    
+    h2{
+        color:black;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        text-shadow: 0px 20px 30px purple;
+
+    }
 
 
 
