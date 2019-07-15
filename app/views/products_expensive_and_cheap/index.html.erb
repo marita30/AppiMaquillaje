@@ -1,3 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MakeUp</title>
 
-<%= @type %>
-<%= @category%>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+
+  <body>
+
+     <%  if @array %>
+        <% i= 0 %>
+        <% cantidad = @array.count-3%>
+           <h5> <%= @infor %> </h5>
+       
+        <% @array.each do |record| 
+        i+=1
+        if i > cantidad
+         %>
+
+
+<table >
+ 
+  <tr>
+    <th> <%= record["name"]%></th>
+    <th><%= record["price"]%>$</th>
+  </tr>
+
+  
+         
+
+          <%
+            record["product_type"]
+            record["product_category"]
+            record["price"]
+        end
+
+
+        if i < 3
+         %>
+
+<table >
+         <tr>
+             <th> <%= record["name"]%></th>
+             <th><%= record["price"]%>$</th>
+         </tr>
+        
+
+           <%
+            record["product_type"]
+            record["product_category"]
+            record["price"]
+        end
+     end
+    end
+    %> 
+    </body>
+</html>

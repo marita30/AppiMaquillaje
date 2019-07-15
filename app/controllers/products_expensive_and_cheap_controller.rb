@@ -17,7 +17,8 @@ class ProductsExpensiveAndCheapController < ApplicationController
         @array = JSON.parse(response.body)
             # Para ardenar el precio de los productos y corriendo el arreglo como .each
            @array = @array.sort_by{ |value| value["price"].to_f}.reverse!
-           binding.pry
+           @infor = "Product #{type}, Category #{category}" 
+        
      end
 
 
