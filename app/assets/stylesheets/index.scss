@@ -1,117 +1,796 @@
-body {
-    // background-image:image-url("maquillaje2.png");
-    // background-image: linear-gradient(#ffe4e1, #e3f7f0);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-image: linear-gradient(to right, #ff6e7f 0%, #bfe9ff 51%, #ff6e7f 100%)
-}
+// body {
+//     // background-image:image-url("maquillaje2.png");
+//     // background-image: linear-gradient(#ffe4e1, #e3f7f0);
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     background-image: linear-gradient(to right, #ff6e7f 0%, #bfe9ff 51%, #ff6e7f 100%)
+// }
 
-body:hover { 
-    background-position: right center; 
-}
+// body:hover { 
+//     background-position: right center; 
+// }
 
 
 
-p {
-    font-family: 'Muli', sans-serif;
-    font-size: 25px;
-    text-align: center;
-    font-weight: bold;
-    color: blueviolet;
+// p {
+//     font-family: 'Muli', sans-serif;
+//     font-size: 25px;
+//     text-align: center;
+//     font-weight: bold;
+//     color: blueviolet;
 
-}
+// }
 
-h4, h5{
-    text-align: center;
-    font-weight: bold;
-    font-style: italic;
-    padding: 5px 5px 5px 15px;
-    font-size: 12px;
-    margin: -7px -7px 0;
-    color:black;
+// h4, h5{
+//     text-align: center;
+//     font-weight: bold;
+//     font-style: italic;
+//     padding: 5px 5px 5px 15px;
+//     font-size: 12px;
+//     margin: -7px -7px 0;
+//     color:black;
 
-}
+// }
 
-a.btn.btn-primary{
-    background-image: linear-gradient(hsla(338, 100%, 94%, 0.431), rgb(192, 192, 192));
-    color: black;
-    border-bottom-style: double;
+// a.btn.btn-primary{
+//     background-image: linear-gradient(hsla(338, 100%, 94%, 0.431), rgb(192, 192, 192));
+//     color: black;
+//     border-bottom-style: double;
     
-}
+// }
   
   
   
 
 
-.card-body1{
+// .card-body1{
     
-    border-color:  chocolate; 
-    border-style: double;
-    border-radius: 8px;
-    background-image: linear-gradient(#ffe4e1, #e3f7f0);
+//     border-color:  chocolate; 
+//     border-style: double;
+//     border-radius: 8px;
+//     background-image: linear-gradient(#ffe4e1, #e3f7f0);
     
     
   
-}
+// }
 
-.card-body2 {
+// .card-body2 {
 
-    border-color:  midnightblue; 
-    border-style: double;
-    border-radius: 8px;
-    background-image: linear-gradient(#ffe4e1, #e3f7f0);
+//     border-color:  midnightblue; 
+//     border-style: double;
+//     border-radius: 8px;
+//     background-image: linear-gradient(#ffe4e1, #e3f7f0);
     
 
+// }
+
+// .card-body3 {
+//     border-color: olive;
+//     border-style: double;
+//     border-radius: 8px;
+//     background-image: linear-gradient(#ffe4e1, #e3f7f0);
+
+// }
+
+
+// .card-body4 {
+//     border-color: orange;
+//     border-style: double;
+//     border-radius: 8px;
+//     background-image: linear-gradient(#ffe4e1, #e3f7f0);
+
+// }
+
+
+// .card-body5 {
+//     border-color: teal;
+//     border-style: double;
+//     border-radius: 8px;
+//     background-image: linear-gradient(#ffe4e1, #e3f7f0);
+
+// }
+
+// .card-body6 {
+//     border-color: red;
+//     border-style: double;
+//     border-radius: 8px;
+//     background-image: linear-gradient(#ffe4e1, #e3f7f0);
+
+// }
+
+
+// .card-body7 {
+//     border-color: seagreen;
+//     border-style: double;
+//     border-radius: 8px;
+//     background-image: linear-gradient(#ffe4e1, #e3f7f0);
+
+// }
+
+
+// .card-body8 {
+//     border-color: darkturquoise;
+//     border-style: double;
+//     border-radius: 8px;
+//     background-image: linear-gradient(#ffe4e1, #e3f7f0);
+
+// }
+
+
+
+// Reset.
+// Based on meyerweb.com/eric/tools/css/reset (v2.0 | 20110126 | License: public domain)
+
+	html, body, div, span, applet, object,
+	iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+	pre, a, abbr, acronym, address, big, cite,
+	code, del, dfn, em, img, ins, kbd, q, s, samp,
+	small, strike, strong, sub, sup, tt, var, b,
+	u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+	form, label, legend, table, caption, tbody,
+	tfoot, thead, tr, th, td, article, aside,
+	canvas, details, embed, figure, figcaption,
+	footer, header, hgroup, menu, nav, output, ruby,
+	section, summary, time, mark, audio, video {
+
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+	}
+
+	article, aside, details, figcaption, figure,
+	footer, header, hgroup, menu, nav, section {
+		display: block;
+	}
+
+	body {
+        line-height: 1;
+        background-image: linear-gradient(#ffe4e1, #e3f7f0);
+	}
+
+	ol, ul {
+		list-style:none;
+	}
+
+	blockquote,	q {
+		quotes: none;
+
+		&:before,
+		&:after {
+			content: '';
+			content: none;
+		}
+	}
+
+
+	body {
+		-webkit-text-size-adjust: none;
+	}
+
+	
+
+	input::-moz-focus-inner {
+		border: 0;
+		padding: 0;
+	}
+
+	input, select, textarea {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+	}
+
+/* Basic */
+
+	// Set box model to border-box.
+	// Based on css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+		html {
+			box-sizing: border-box;
+		}
+
+		*, *:before, *:after {
+			box-sizing: inherit;
+		}
+
+	html, body {
+        height: 100%;
+        
+	}
+
+	body {
+        background: _palette(bg);
+        
+
+		// Stops initial animations until page loads.
+			
+
+	}
+
+	body, input, select, textarea {
+		color: _palette(fg);
+		font-family: 'Source Sans Pro', sans-serif;
+		font-size: 16pt;
+		font-weight: 400;
+		line-height: 1.75em;
+	}
+
+	a {
+		
+		border-bottom: dotted 1px;
+		color: _palette(accent1, bg);
+		text-decoration: none;
+
+		&:hover {
+			border-bottom-color: transparent;
+		}
+	}
+
+	strong, b {
+		font-weight: 600;
+		color: _palette(fg-bold);
+	}
+
+	em, i {
+		font-style: italic;
+	}
+
+	p, ul, ol, dl, table, blockquote, form {
+		margin: 0 0 2em 0;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		color: _palette(fg-bold);
+		font-weight: 700;
+		letter-spacing: 0.125em;
+		line-height: 1.75em;
+		margin-bottom: 1em;
+		text-transform: uppercase;
+		text-align: center;
+
+		a {
+			color: inherit;
+			text-decoration: none;
+		}
+	}
+
+	h2 {
+		font-size: 1.75em;
+	}
+
+	h3 {
+		font-size: 1.5em;
+	}
+
+	sub {
+		font-size: 0.8em;
+		position: relative;
+		top: 0.5em;
+	}
+
+	sup {
+		font-size: 0.8em;
+		position: relative;
+		top: -0.5em;
+	}
+
+	hr {
+		border: 0;
+		border-top: solid 1px _palette(border);
+		margin-bottom: 1.5em;
+	}
+
+	blockquote {
+		border-left: solid 0.5em _palette(border);
+		font-style: italic;
+		padding: 1em 0 1em 2em;
+	}
+
+/* Container */
+
+	.container {
+		margin: 0 auto;
+		max-width: 100%;
+		width: 51em;
+
+		&.medium {
+			width: (51em * 0.75);
+		}
+
+		
+			&.medium {
+				width: (48em * 0.75);
+			}
+		
+
+		
+			&.medium {
+				width: (95% * 0.75);
+			}
+		
+
+		
+
+	}
+
+
+	header {
+		text-align: center;
+
+		p {
+			position: relative;
+			top: -1em;
+			color: _palette(fg-light);
+			text-transform: uppercase;
+			letter-spacing: 0.075em;
+		}
+
+		&.major {
+			border-bottom-width: 1px;
+			border-color: _palette(border);
+			border-style: solid;
+			border-top-width: 1px;
+			margin-bottom: 6em;
+			padding: 4em 0;
+			position: relative;
+
+			&:before,
+			&:after {
+				background: _palette(border);
+				content: '';
+				display: block;
+				height: 1px;
+				left: 0;
+				position: absolute;
+				width: 100%;
+			}
+
+			&:before {
+				top: 10px;
+			}
+
+			&:after {
+				bottom: 10px;
+			}
+
+			h2 {
+				margin: 0;
+			}
+
+			p {
+				top: 0;
+				margin: 1.5em 0 0 0;
+				padding: 1.5em 1.5em 0 1.5em;
+				font-size: 1.5em;
+				line-height: 1.75em;
+				border-top: solid 1px _palette(border);
+				display: inline-block;
+			}
+
+			&.last {
+				border-bottom: 0;
+				margin-bottom: 0;
+				padding-bottom: 0;
+
+				&:after {
+					display: none;
+				}
+
+				h2 {
+					margin-bottom: 1em;
+				}
+			}
+		}
+	}
+
+	footer {
+		text-align: center;
+
+		&.major {
+			border-bottom-width: 1px;
+			border-color: _palette(border);
+			border-style: solid;
+			border-top-width: 1px;
+			margin-top: 6em;
+			padding: 4em 0;
+			position: relative;
+
+			&:before,
+			&:after {
+				background: _palette(border);
+				content: '';
+				display: block;
+				height: 1px;
+				left: 0;
+				position: absolute;
+				width: 100%;
+			}
+
+			&:before {
+				top: 10px;
+			}
+
+			&:after {
+				bottom: 10px;
+			}
+		}
+	}
+
+
+
+
+
+/* Table */
+
+	.table-wrapper {
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	table {
+		width: 100%;
+
+		&.default {
+			width: 100%;
+
+			tbody {
+				tr {
+					border-bottom: solid 1px _palette(border);
+
+					&:nth-child(2n - 1) {
+						background: _palette(border-bg);
+					}
+				}
+			}
+
+			td {
+				padding: 0.5em 1em 0.5em 1em;
+			}
+
+			th {
+				color: _palette(fg-bold);
+				font-size: 0.8em;
+				font-weight: 700;
+				letter-spacing: 0.125em;
+				line-height: 1.75em;
+				padding: 0.5em 1em 0.5em 1em;
+				text-align: left;
+				text-transform: uppercase;
+			}
+
+			thead {
+				border-bottom: solid 1px _palette(border);
+			}
+		}
+	}
+
+
+/* Header */
+
+	#header {
+		background-attachment:		scroll,							scroll,					fixed;
+		background-image:			url('images/top-3200.svg'),		url('images/overlay.png'),		url('../../images/header.jpg');
+		background-position:		bottom center,					top left,				center center;
+		background-repeat:			repeat-x,						repeat,					no-repeat;
+		background-size:			3200px 460px,					auto,					cover;
+		color: _palette(accent2, fg);
+		padding: 10em 0 20em 0;
+		position: relative;
+		text-align: center;
+
+		&:before,
+		&:after {
+			background: _palette(border);
+			content: '';
+			left: 50%;
+			position: absolute;
+			width: 1px;
+			z-index: 0;
+		}
+
+		&:before {
+			height: calc(100% - 50px);
+			opacity: 0.15;
+			top: 0;
+		}
+
+		&:after {
+			bottom: 0;
+			height: 50px;
+		}
+
+		a {
+			border-bottom-color: _palette(accent2, fg-light);
+			color: _palette(accent2, fg);
+
+			&:hover {
+				border-bottom-color: transparent;
+				color: _palette(accent1, bg);
+			}
+		}
+
+		strong, b {
+			color: _palette(accent2, fg-bold);
+		}
+
+		h1, h2, h3, h4, h5, h6 {
+			color: _palette(accent2, fg-bold);
+		}
+
+		input[type="submit"],
+		input[type="reset"],
+		input[type="button"],
+		.button {
+			background: _palette(accent2, fg-bold);
+			color: _palette(accent2, bg);
+		}
+
+		.logo {
+			background: _palette(accent1, bg);
+			border-radius: 100%;
+			color: _palette(accent1, fg-bold);
+			cursor: default;
+			display: inline-block;
+			font-size: 2.25em;
+			height: 2.35em;
+			line-height: 2.35em;
+			margin: 0 0 0.75em 0;
+			text-align: center;
+			width: 2.35em;
+
+			&.fa-paper-plane-o:before {
+				left: -0.075em;
+				position: relative;
+			}
+		}
+
+		h1 {
+			font-size: 2.5em;
+			margin: 0;
+		}
+
+		p {
+			font-size: 1.5em;
+			line-height: 1.5em;
+			margin: 0.25em 0 0 0;
+		}
+	}
+
+/* Footer */
+
+	#footer {
+		background-attachment:		scroll;
+		background-color:			_palette(accent1, bg);
+		background-image:			url('images/bottom-3200.svg');
+		background-position:		top center;
+		background-repeat:			repeat-x;
+		background-size:			3200px 460px;
+		color: _palette(accent1, fg);
+
+		/*
+			Since the SVG background occupies a lot of vertical space, we'll
+			add additional top padding (to move our content out of its way)
+			and a negative margin (to move everything up a bit).
+		*/
+		margin-top: -260px;
+		padding: calc(460px + 6em) 0 10em 0;
+
+		position: relative;
+		text-align: center;
+
+		&:before {
+			background: _palette(border);
+			content: '';
+			height: calc(460px + 6em);
+			left: 50%;
+			position: absolute;
+			top: 0;
+			width: 1px;
+			z-index: 0;
+		}
+
+		a {
+			color: _palette(accent1, fg-bold);
+		}
+
+		strong, b {
+			color: _palette(accent1, fg-bold);
+		}
+
+		h1, h2, h3, h4, h5, h6 {
+			color: _palette(accent1, fg-bold);
+		}
+
+		header {
+			p {
+				color: _palette(accent1, fg-light);
+			}
+		}
+
+		.copyright {
+			color: _palette(accent1, fg-light);
+			font-size: 0.8em;
+			line-height: 1em;
+			margin: 3em 0 0 0;
+
+			li {
+				border-left: dotted 1px;
+				display: inline-block;
+				margin-left: 1em;
+				padding-left: 1em;
+
+				&:first-child {
+					padding: 0;
+					margin: 0;
+					border: 0;
+				}
+
+				a, span {
+					color: inherit;
+
+					&:hover {
+						color: _palette(accent1, fg-bold);
+					}
+				}
+			}
+		}
+	}
+
+/* Main */
+
+	#main {
+		padding: 6em 0 5em 0;
+		position: relative;
+		z-index: 1;
+
+		&:before {
+			background: _palette(border);
+			content: '';
+			height: 100%;
+			left: 50%;
+			position: absolute;
+			top: 0;
+			width: 1px;
+			z-index: -1;
+		}
+
+		header.major,
+		footer.major {
+			background: _palette(bg);
+		}
+	}
+
+
+
+
+		/* Header */
+
+			#header {
+				padding: 8em 0 16em 0;
+
+				h1 {
+					font-size: 2.25em;
+				}
+
+				p {
+					font-size: 1.25em;
+					line-height: 1.65em;
+				}
+			}
+
+	
+
+/* Normal */
+
+
+		/* Basic */
+
+			body, input, select, textarea {
+				font-size: 13pt;
+			}
+
+			h2 {
+				font-size: 1.35em;
+			}
+
+			h3 {
+				font-size: 1.15em;
+			}
+
+		/* Section/Article */
+
+			header {
+				&.major {
+					margin-bottom: 4em;
+					padding: 3em 0;
+
+					p {
+						font-size: 1.15em;
+					}
+				}
+			}
+
+			footer {
+				&.major {
+					margin-top: 4em;
+					padding: 3em 0;
+				}
+			}
+
+
+
+		/* Header */
+
+			#header {
+				background-attachment:		scroll,							scroll,							scroll;
+				background-image:			url('images/top-1600.svg'),		url('images/overlay.png'),		url('../../images/header.jpg');
+				background-size:			1600px 230px,					auto,							cover;
+				padding: 6em 0 12em 0;
+
+				&:before {
+					height: calc(100% - 25px);
+				}
+
+				&:after {
+					height: 25px;
+				}
+
+				h1 {
+					font-size: 2em;
+				}
+
+				p {
+					font-size: 1.15em;
+				}
+			}
+
+		/* Footer */
+
+			#footer {
+				background-image:			url('images/bottom-1600.svg');
+				background-size:			1600px 230px;
+				margin-top: -100px;
+				padding: calc(230px + 4em) 0 6em 0;
+
+				&:before {
+					height: calc(230px + 4em);
+				}
+			}
+
+
+		/* Header */
+
+			#header {
+				background-image:			url('images/top-1280.svg'),			url('images/overlay.png'),		url('../../images/header.jpg');
+				background-size:			1280px 184px,						auto,							cover;
+				padding: 3em 0 7em 0;
+
+				&:before {
+					height: calc(100% - 20px);
+				}
+
+				&:after {
+					height: 20px;
+				}
+
+				
+
+				h1 {
+					font-size: 1.25em;
+				}
+
+				p {
+					font-size: 1em;
+				}
+			}
+
+// darle diseño ala imagen del maquillaje
+.dock-item{
+ border-radius: 8em;
+ box-shadow: 0 20px 30px purple;
 }
 
-.card-body3 {
-    border-color: olive;
-    border-style: double;
-    border-radius: 8px;
-    background-image: linear-gradient(#ffe4e1, #e3f7f0);
-
-}
-
-
-.card-body4 {
-    border-color: orange;
-    border-style: double;
-    border-radius: 8px;
-    background-image: linear-gradient(#ffe4e1, #e3f7f0);
-
-}
-
-
-.card-body5 {
-    border-color: teal;
-    border-style: double;
-    border-radius: 8px;
-    background-image: linear-gradient(#ffe4e1, #e3f7f0);
-
-}
-
-.card-body6 {
-    border-color: red;
-    border-style: double;
-    border-radius: 8px;
-    background-image: linear-gradient(#ffe4e1, #e3f7f0);
-
-}
-
-
-.card-body7 {
-    border-color: seagreen;
-    border-style: double;
-    border-radius: 8px;
-    background-image: linear-gradient(#ffe4e1, #e3f7f0);
-
-}
-
-
-.card-body8 {
-    border-color: darkturquoise;
-    border-style: double;
-    border-radius: 8px;
-    background-image: linear-gradient(#ffe4e1, #e3f7f0);
-
-}
+	
