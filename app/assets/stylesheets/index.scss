@@ -21,16 +21,6 @@
 
 // }
 
-// h4, h5{
-//     text-align: center;
-//     font-weight: bold;
-//     font-style: italic;
-//     padding: 5px 5px 5px 15px;
-//     font-size: 12px;
-//     margin: -7px -7px 0;
-//     color:black;
-
-// }
 
 // a.btn.btn-primary{
 //     background-image: linear-gradient(hsla(338, 100%, 94%, 0.431), rgb(192, 192, 192));
@@ -38,83 +28,68 @@
 //     border-bottom-style: double;
     
 // }
-  
-  
-  
 
-
-// .card-body1{
+div.card-body1{
     
-//     border-color:  chocolate; 
-//     border-style: double;
-//     border-radius: 8px;
-//     background-image: linear-gradient(#ffe4e1, #e3f7f0);
+    border-color:  chocolate; 
+    border-style: groove;
+    background-image: linear-gradient(#edeff0, silver);
     
+}
+
+div.card-body2{
     
-  
-// }
-
-// .card-body2 {
-
-//     border-color:  midnightblue; 
-//     border-style: double;
-//     border-radius: 8px;
-//     background-image: linear-gradient(#ffe4e1, #e3f7f0);
+    border-color:  chocolate; 
+    border-style: groove;
+    background-image: linear-gradient(#edeff0, silver);
     
+}
 
-// }
+div.card-body3{
+    
+    border-color:  chocolate; 
+    border-style: groove;
+    background-image: linear-gradient(#edeff0, silver);
+    
+}
 
-// .card-body3 {
-//     border-color: olive;
-//     border-style: double;
-//     border-radius: 8px;
-//     background-image: linear-gradient(#ffe4e1, #e3f7f0);
+div.card-body4{
+    
+    border-color:  chocolate; 
+    border-style: groove;
+    background-image: linear-gradient(#edeff0, silver);
+    
+}
 
-// }
+div.card-body5{
+    
+    border-color:  chocolate; 
+    border-style: groove;
+    background-image: linear-gradient(#edeff0, silver);
+    
+}
+div.card-body6{
+    
+    border-color:  chocolate; 
+    border-style: groove;
+    background-image: linear-gradient(#edeff0, silver);
+    
+}
+div.card-body7{
+    
+    border-color:  chocolate; 
+    border-style: groove;
+    background-image: linear-gradient(#edeff0, silver);
+    
+}
+div.card-body8{
+    
+    border-color:  chocolate; 
+    border-style: groove;
+    background-image: linear-gradient(#edeff0, silver);
+    
+}
 
-
-// .card-body4 {
-//     border-color: orange;
-//     border-style: double;
-//     border-radius: 8px;
-//     background-image: linear-gradient(#ffe4e1, #e3f7f0);
-
-// }
-
-
-// .card-body5 {
-//     border-color: teal;
-//     border-style: double;
-//     border-radius: 8px;
-//     background-image: linear-gradient(#ffe4e1, #e3f7f0);
-
-// }
-
-// .card-body6 {
-//     border-color: red;
-//     border-style: double;
-//     border-radius: 8px;
-//     background-image: linear-gradient(#ffe4e1, #e3f7f0);
-
-// }
-
-
-// .card-body7 {
-//     border-color: seagreen;
-//     border-style: double;
-//     border-radius: 8px;
-//     background-image: linear-gradient(#ffe4e1, #e3f7f0);
-
-// }
-
-
-// .card-body8 {
-//     border-color: darkturquoise;
-//     border-style: double;
-//     border-radius: 8px;
-//     background-image: linear-gradient(#ffe4e1, #e3f7f0);
-
-// }
 
 
 
@@ -122,7 +97,7 @@
 // Based on meyerweb.com/eric/tools/css/reset (v2.0 | 20110126 | License: public domain)
 
 	html, body, div, span, applet, object,
-	iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
+	iframe, h1, h2, h3,  h6, p, blockquote,
 	pre, a, abbr, acronym, address, big, cite,
 	code, del, dfn, em, img, ins, kbd, q, s, samp,
 	small, strike, strong, sub, sup, tt, var, b,
@@ -165,33 +140,15 @@
 		}
     }
     
-    h1{
+    h1, h4{
         color:black;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
         text-transform: capitalize;
      
     }
-
-
 	body {
 		-webkit-text-size-adjust: none;
 	}
-
-	
-
-	input::-moz-focus-inner {
-		border: 0;
-		padding: 0;
-	}
-
-	input, select, textarea {
-		-moz-appearance: none;
-		-webkit-appearance: none;
-		-ms-appearance: none;
-		appearance: none;
-    }
-    
-
 /* Basic */
 
 	// Set box model to border-box.
@@ -207,15 +164,6 @@
 	html, body {
         height: 100%;
         
-	}
-
-	body {
-        background: _palette(bg);
-        
-
-		// Stops initial animations until page loads.
-			
-
 	}
 
 	body, input, select, textarea {
@@ -317,14 +265,8 @@
 		
 			&.medium {
 				width: (95% * 0.75);
-			}
-		
-
-		
-
-	}
-
-
+            }
+    }
 	header {
 		text-align: center;
 
@@ -364,10 +306,7 @@
 				bottom: 10px;
 			}
 
-			h2 {
-				margin: 0;
-			}
-
+			
 			p {
 				top: 0;
 				margin: 1.5em 0 0 0;
@@ -426,56 +365,6 @@
 			}
 		}
 	}
-
-
-
-
-
-/* Table */
-
-	.table-wrapper {
-		overflow-x: auto;
-		-webkit-overflow-scrolling: touch;
-	}
-
-	table {
-		width: 100%;
-
-		&.default {
-			width: 100%;
-
-			tbody {
-				tr {
-					border-bottom: solid 1px _palette(border);
-
-					&:nth-child(2n - 1) {
-						background: _palette(border-bg);
-					}
-				}
-			}
-
-			td {
-				padding: 0.5em 1em 0.5em 1em;
-			}
-
-			th {
-				color: _palette(fg-bold);
-				font-size: 0.8em;
-				font-weight: 700;
-				letter-spacing: 0.125em;
-				line-height: 1.75em;
-				padding: 0.5em 1em 0.5em 1em;
-				text-align: left;
-				text-transform: uppercase;
-			}
-
-			thead {
-				border-bottom: solid 1px _palette(border);
-			}
-		}
-	}
-
-
 /* Header */
 
 	#header {
@@ -524,18 +413,6 @@
 			color: _palette(accent2, fg-bold);
 		}
 
-		h1, h2, h3, h4, h5, h6 {
-			color: _palette(accent2, fg-bold);
-		}
-
-		input[type="submit"],
-		input[type="reset"],
-		input[type="button"],
-		.button {
-			background: _palette(accent2, fg-bold);
-			color: _palette(accent2, bg);
-		}
-
 		.logo {
 			background: _palette(accent1, bg);
 			border-radius: 100%;
@@ -555,100 +432,26 @@
 			}
 		}
 
-		h1 {
-			font-size: 2.5em;
-			margin: 0;
-		}
 
-		p {
-			font-size: 1.5em;
-			line-height: 1.5em;
-			margin: 0.25em 0 0 0;
-		}
+		
 	}
 
 /* Footer */
 
-	#footer {
-		background-attachment:		scroll;
-		background-color:			_palette(accent1, bg);
-		background-image:			url('images/bottom-3200.svg');
-		background-position:		top center;
-		background-repeat:			repeat-x;
-		background-size:			3200px 460px;
-		color: _palette(accent1, fg);
+    // Dandole diseño al h3 en el footer y al p
+    h3{
+        color:black;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        text-shadow: 0px 20px 30px purple;
+    }
+    p{
+        color:black;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        text-shadow: 0px 20px 30px purple;
+    }
 
-		/*
-			Since the SVG background occupies a lot of vertical space, we'll
-			add additional top padding (to move our content out of its way)
-			and a negative margin (to move everything up a bit).
-		*/
-		margin-top: -260px;
-		padding: calc(460px + 6em) 0 10em 0;
-
-		position: relative;
-		text-align: center;
-
-		&:before {
-			background: _palette(border);
-			content: '';
-			height: calc(460px + 6em);
-			left: 50%;
-			position: absolute;
-			top: 0;
-			width: 1px;
-			z-index: 0;
-		}
-
-		a {
-			color: _palette(accent1, fg-bold);
-		}
-
-		strong, b {
-			color: _palette(accent1, fg-bold);
-		}
-
-		h1, h2, h3, h4, h5, h6 {
-			color: _palette(accent1, fg-bold);
-		}
-
-		header {
-			p {
-				color: _palette(accent1, fg-light);
-			}
-		}
-
-		.copyright {
-			color: _palette(accent1, fg-light);
-			font-size: 0.8em;
-			line-height: 1em;
-			margin: 3em 0 0 0;
-
-			li {
-				border-left: dotted 1px;
-				display: inline-block;
-				margin-left: 1em;
-				padding-left: 1em;
-
-				&:first-child {
-					padding: 0;
-					margin: 0;
-					border: 0;
-				}
-
-				a, span {
-					color: inherit;
-
-					&:hover {
-						color: _palette(accent1, fg-bold);
-					}
-				}
-			}
-		}
-	}
-
+   
 /* Main */
-
 	#main {
 		padding: 6em 0 5em 0;
 		position: relative;
@@ -671,6 +474,7 @@
         }
     
     }
+    // darle diseño al h2 donde comienza where 
     
     h2{
         color:black;
@@ -678,44 +482,6 @@
         text-shadow: 0px 20px 30px purple;
 
     }
-
-
-
-
-		/* Header */
-
-			#header {
-				padding: 8em 0 16em 0;
-
-				h1 {
-					font-size: 2.25em;
-				}
-
-				p {
-					font-size: 1.25em;
-					line-height: 1.65em;
-				}
-			}
-
-	
-
-/* Normal */
-
-
-		/* Basic */
-
-			body, input, select, textarea {
-				font-size: 13pt;
-			}
-
-			h2 {
-				font-size: 1.35em;
-			}
-
-			h3 {
-				font-size: 1.15em;
-			}
-
 		/* Section/Article */
 
 			header {
@@ -735,48 +501,6 @@
 					padding: 3em 0;
 				}
 			}
-
-
-
-		/* Header */
-
-			#header {
-				background-attachment:		scroll,							scroll,							scroll;
-				background-image:			url('images/top-1600.svg'),		url('images/overlay.png'),		url('../../images/header.jpg');
-				background-size:			1600px 230px,					auto,							cover;
-				padding: 6em 0 12em 0;
-
-				&:before {
-					height: calc(100% - 25px);
-				}
-
-				&:after {
-					height: 25px;
-				}
-
-				h1 {
-					font-size: 2em;
-				}
-
-				p {
-					font-size: 1.15em;
-				}
-			}
-
-		/* Footer */
-
-			#footer {
-				background-image:			url('images/bottom-1600.svg');
-				background-size:			1600px 230px;
-				margin-top: -100px;
-				padding: calc(230px + 4em) 0 6em 0;
-
-				&:before {
-					height: calc(230px + 4em);
-				}
-			}
-
-
 		/* Header */
 
 			#header {
@@ -801,12 +525,76 @@
 				p {
 					font-size: 1em;
 				}
-			}
+            }
+            
+// Diseño del nav
+      #nav {
+                background-image: linear-gradient(black, gray);
+                text-align: center;
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 100%;
+                z-index: 10000;
+                cursor: default;
+                height: 3.5em;
+                line-height: 3.5em;
+            }
+        
+                #nav ul {
+                    margin-bottom: 0;
+                    list-style: none;
+                    padding-left: 0;
+                }
+        
+                #nav li {
+                    display: inline-block;
+                    padding-left: 0;
+                }
+        
+                #nav a {
+                    -moz-transition: background-color .2s ease-in-out;
+                    -webkit-transition: background-color .2s ease-in-out;
+                    -ms-transition: background-color .2s ease-in-out;
+                    transition: background-color .2s ease-in-out;
+                    position: relative;
+                    display: block;
+                    color: #fff;
+                    text-decoration: none;
+                    outline: 0;
+                    font-weight: 600;
+                    border-radius: 8px;
+                    color: #fff;
+                    height: 2.5em;
+                    line-height: 2.5em;
+                    padding: 0 1.25em;
+                }
+        
+                    #nav a:hover {
+                        color: #fff !important;
+                        background: #383838;
+                    }
+        
+                    #nav a.active {
+                        background: #484848;
+                    }
+        
+                        #nav a.active:before {
+                            content: '';
+                            display: block;
+                            position: absolute;
+                            bottom: -0.6em;
+                            left: 50%;
+                            margin-left: -0.75em;
+                            border-left: solid 0.75em transparent;
+                            border-right: solid 0.75em transparent;
+                            border-top: solid 0.6em #282828;
+                        }
 
 // darle diseño ala imagen del maquillaje
 .dock-item{
  border-radius: 8em;
- box-shadow: 0 20px 30px purple;
+ box-shadow: 0px 20px 30px gray;
 }
 
 	
