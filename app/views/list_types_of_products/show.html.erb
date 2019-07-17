@@ -12,9 +12,21 @@
   <body>
 
 
+  <nav id="nav">
+				<ul class="container">
+					<li><a href="/types">Home</a></li>
+				</ul>
+	</nav>
 
+	<div id="header">
+				<span class="logo icon fa-paper-plane"></span>
+				<h1>Welcome to the MAKEUP API</h1>
+	</div>
 
-        <% if @blush_categories %> 
+		<div class="container1">
+  
+
+       <center> <% if @blush_categories %> 
         <% @blush_categories.each do |category| %>
        <%= link_to category, type_blush_category_path(:type => "blush", :category => category), :class => 'btn btn-primary' %>
         <%end%>
@@ -76,6 +88,8 @@
 <%= link_to category, type_mascara_category_path(:type => "mascara", :category => category), :class => 'btn btn-primary' %>
  <%end%>
 <%end%>
+
+</div>
 
 
 </body>
