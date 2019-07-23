@@ -9,14 +9,15 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Muli|Source+Sans+Pro:400,700,700i&display=swap" rel="stylesheet">
   </head>
+
   <body>
 
 	<nav id="nav">
-				<ul class="container">
-					<li><a href="/types">Home</a></li>
-				</ul>
-			</nav>
-
+    <ul class="container">        
+      <button class="btn btn-dark"><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></button>
+    	<li><a href="/types">Home</a></li>
+		</ul>
+	</nav>
 
 	<div id="header">
 				<span class="logo icon fa-paper-plane"></span>
