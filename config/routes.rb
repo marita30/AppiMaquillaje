@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  devise_for :users
+  devise_for :users 
 # Definis la ruta y luego lo del controlador
 
   get '/types', to: 'list_types_of_products#index'
