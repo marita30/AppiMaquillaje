@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   devise_for :users
+
   get '/types', to: 'list_types_of_products#index'
 
   get '/category/Blush', to: 'list_types_of_products#show'

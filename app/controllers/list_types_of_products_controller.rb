@@ -3,6 +3,8 @@ require 'pry'
 require 'json'
 
 class ListTypesOfProductsController < ApplicationController
+    # Bloquear las paginnas si el servidor no se ha loguiado
+    before_action :authenticate_user!
 
     def index
         

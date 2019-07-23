@@ -3,7 +3,8 @@ require 'pry'
 require 'json'
 
 class ProductsExpensiveAndCheapController < ApplicationController
-
+    before_action :authenticate_user!
+    
     def index
         @type = params["type"]
         @category =params["category"]
