@@ -16,16 +16,20 @@
     <ul class="container">        
       <button class="btn btn-dark"><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></button>
     	<li><a href="/types">Home</a></li>
+
 		</ul>
 	</nav>
 
 	<div id="header">
 				<span class="logo icon fa-paper-plane"></span>
-				<h1>Welcome to the MAKEUP API</h1>
-        <br> <%= link_to image_tag("maquillaje2.png",  :class => 'dock-item') %>
-     
-
-			</div>
+        <%
+=begin%>
+ Para mandar a imprimir el nombre en el current
+<%
+=end%>
+	<h1>Welcome to the MAKEUP API <br> <%= current_user.name%></h1>
+  <br> <%= link_to image_tag("maquillaje2.png",  :class => 'dock-item') %>
+</div>
 
 		<!-- Main -->
 			<div id="main">
