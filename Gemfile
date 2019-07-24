@@ -1,4 +1,6 @@
 source 'https://rubygems.org'
+
+ruby '2.2.3'
 #Utilizando la gem devise para crear el login y los usuarios.
 gem 'devise'
 
