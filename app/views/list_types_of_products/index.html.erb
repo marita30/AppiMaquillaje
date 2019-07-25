@@ -86,8 +86,26 @@
            <center> <%= link_to "Category", category_lipstick_path(:type => "lipstick"), :class => 'btn btn-primary ' %></center>                                     
       <% elsif  type["product_type"] == "nail_polish"%>
            <center>  <p  class="card-text">Is a lacquer that can be applied to the human fingernail to decorate and protect the nail.</h5>
-           <center> <%= link_to "Category", category_nail_polish_path(:type => "nail_polish"), :class => 'btn btn-primary ' %></center>                                     
-      
+          
+           <center> <%= link_to "Category", category_nail_polish_path(:type => "nail_polish"), :class => 'btn btn-primary ' %></center> 
+         
+<div id="holder">
+<div class="box entypo-thumbs-up"> Like</div>
+</div>
+         
+          <%
+=begin%>
+ <span><a class="like-button" href="#"><i class="material-icons">favorite</i></a></span> 
+<%
+=end%>
+
+
+       <%
+=begin%>
+ <%= link_to , create_like_path(:id_api => type["id"], :user_id => current_user.id), method: :post%> 
+<%
+=end%>
+
       <% end %>
     </div>
   </div>
@@ -96,7 +114,6 @@
 
 </div>
 <% end %>
-
 
 
 
