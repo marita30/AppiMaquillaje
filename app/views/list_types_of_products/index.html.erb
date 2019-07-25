@@ -51,114 +51,22 @@
 			</div>
 
 <% if @array %> 
-
-<% @array.each do |type| %>
  <div class="row">
+<% @array.each do |type| %>
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body1">
-        <p><%= type["product_type"]%></p>
+       <center> <p><%= type["product_type"]%></p>
        <center> <p class="card-text">Develop a pink tinge in the face.</p>
        <center><%= link_to "Category", category_Blush_path(:type => "blush"), :class => 'btn btn-primary' %></center>
-       
       </div>
     </div>
   </div>
+ 
         <% end %>
+</div>
 <% end %>
 
-
-<%
-=begin%>
- 
-
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body2">
-         <h4 class="card-title">Bronzer</h4>
-         <center> <p class="card-text">It is a variant of the blush that serves to give a tan or tan to the skin.</p>
-          <center> <%= link_to "Category", category_Bronzer_path(:type => "bronzer"), :class => 'btn btn-primary' %></center>
-      </div>
-    </div>
-  </div>
-</div>
-
-<br>
-
-<div class="row">
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body3">
-          <h4 class="card-title">Eyebrow</h4>
-         <center> <p class="card-text">To give a style of curves to your eyebrows.</p>
-          <center><%= link_to "Category", category_EyeBrow_path(:type => "eyebrow"), :class => 'btn btn-primary' %></center>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body4">
-            <h4 class="card-title">Eyeliner</h4>
-           <center> <p class="card-text">It is the cosmetic used to make the outline, a line with strong intensity that defines the eyes.</p>
-            <center><%= link_to "Category", category_EyeLiner_path(:type => "eyeliner"), :class => 'btn btn-primary' %></center>
-      </div>
-    </div>
-  </div>
-</div>
-
-<br>
-
-<div class="row">
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body5">
-           <h4 class="card-title">EyeShadow</h4>
-          <center> <p class="card-text">the shadows are to give more intensity to your makeup and that your eyes enhance more.</p>
-           <center> <%= link_to "Category", category_EyeShadow_path(:type => "eyeshadow"), :class => 'btn btn-primary' %></center>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body6">
-             <h4 class="card-title">Foundation</h4>
-             <center> <p class="card-text">The one that we always apply after the moisturizer as a previous step to face and lip makeup.</p>
-              <center>  <%= link_to "Category", category_Foundation_path(:type => "foundation"), :class => 'btn btn-primary' %></center>
-           </div>
-      </div>
-   </div>
-</div>
-
-<br>
-
-<div class="row">
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body7">
-            <h4 class="card-title">LipLiner</h4>
-           <center> <p class="card-text">This makeup allows you to delineate your lips to give it a unique shape.</p>
-            <center> <%= link_to "Category", category_LipLiner_path(:type => "lip_liner"), :class => 'btn btn-primary' %></center>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body8">
-             <h4 class="card-title">Mascara</h4>
-            <center>  <p  class="card-text">This makeup allows you to give volume to your lashes for a sensational look.</h5>
-             <center> <%= link_to "Category", category_Mascara_path(:type => "mascara"), :class => 'btn btn-primary ' %></center>
-      </div>
-    </div>  
-  </div>
-</div> 
-<%
-=end%>
 
 <footer>
   <p>Posted by: Maria Jose Chavarria Bravo.</p>
