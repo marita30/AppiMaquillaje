@@ -7,9 +7,18 @@ class ListTypesOfProductsController < ApplicationController
     before_action :authenticate_user!
 
     def index
-        
-       
-    end
+
+    # mandar a traer todo los productos de la api
+    response = RestClient.get "http://makeup-api.herokuapp.com/api/v1/products.json?"
+
+    # para desahacer el texto plano
+    @array = JSON.parse(response.body)
+
+    # Para mandar a imprimir la llave product_type
+    @array =  @array.uniq { |type| type["product_type"] }.reject(&:blank?)
+end
+
+
 
     
  def show 
@@ -62,6 +71,8 @@ class ListTypesOfProductsController < ApplicationController
 
         end
 
+
+
     end
     # Para hacer el valor unico , que no se repita y eliminar los valores nill o nulo.
     
@@ -77,6 +88,9 @@ class ListTypesOfProductsController < ApplicationController
 
 
  end
+
+
+
 
     
 end

@@ -50,19 +50,27 @@
 
 			</div>
 
+<% if @array %> 
 
-
-<div class="row">
+<% @array.each do |type| %>
+ <div class="row">
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body1">
-        <h4 class="card-title">Blush</h4>
+        <p><%= type["product_type"]%></p>
        <center> <p class="card-text">Develop a pink tinge in the face.</p>
        <center><%= link_to "Category", category_Blush_path(:type => "blush"), :class => 'btn btn-primary' %></center>
+       
       </div>
     </div>
   </div>
+        <% end %>
+<% end %>
 
+
+<%
+=begin%>
+ 
 
   <div class="col-sm-6">
     <div class="card">
@@ -148,7 +156,9 @@
       </div>
     </div>  
   </div>
-</div>
+</div> 
+<%
+=end%>
 
 <footer>
   <p>Posted by: Maria Jose Chavarria Bravo.</p>
