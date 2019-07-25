@@ -34,6 +34,7 @@ end
     @lip_liner_categories = []
     @lipstick_categories = []
     @mascara_categories = []
+    @nail_polish_categories = []
     # Haciendo dinamica la url (con paramtros)
     response = RestClient.get "http://makeup-api.herokuapp.com/api/v1/products.json?product_type=#{value}"
     # para desahacer el texto plano
@@ -68,6 +69,9 @@ end
         elsif value['product_type'] == 'mascara'
             @mascara_categories << value['category'] 
 
+        elsif value['product_type'] == 'nail_polish'
+            @nail_polish_categories << value['category'] 
+
 
         end
 
@@ -85,7 +89,7 @@ end
     @lip_liner_categories =  @lip_liner_categories.uniq { |category| category }.reject(&:blank?)
     @lipstick_categories =  @lipstick_categories.uniq { |category| category }.reject(&:blank?)
     @mascara_categories =  @mascara_categories.uniq { |category| category }.reject(&:blank?)
-
+    @nail_polish_categories = @nail_polish_categories.uniq { |category| category }.reject(&:blank?)
 
  end
 
