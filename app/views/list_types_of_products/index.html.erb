@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Muli|Source+Sans+Pro:400,700,700i&display=swap" rel="stylesheet">
   </head>
 
-  <body>
+<body>
 
 	<nav id="nav">
     <ul class="container">        
@@ -20,111 +20,200 @@
 		</ul>
 	</nav>
 
-	<div id="header">
-				<span class="logo icon fa-paper-plane"></span>
+<div id="header">
+	<span class="logo icon fa-paper-plane"></span>
         <%
 =begin%>
  Para mandar a imprimir el nombre en el current
 <%
 =end%>
+
 	<h1>Welcome to the MAKEUP API <br> <%= current_user.name%></h1>
   <br> <%= link_to image_tag("maquillaje2.png",  :class => 'dock-item') %>
 </div>
 
 		<!-- Main -->
-			<div id="main">
+<div id="main">
 
-				<header class="major container medium">
-					<h2> where you will find different 
-					<br />
-				types of makeup at affordable prices.
-				</header>
+	<header class="major container medium">
+		<h2> where you will find different 
+		<br />
+		types of makeup at affordable prices.
+	</header>
 
+	<footer class="major container medium">
+		<h3>I could stop buying makeup</h3>
+		<p> but the truth is that I do not usually give up easily.</p>
 				
-				
-				<footer class="major container medium">
-					<h3>I could stop buying makeup</h3>
-					<p> but the truth is that I do not usually give up easily.</p>
-				
-				</footer>
+	</footer>
 
-			</div>
+</div>
 
 <% if @array %> 
  <div class="row">
+ 
 <% @array.each do |type| %>
-<div class="col-sm-6">
-  <div class="card">
-    <div class="card-body1">
-       <center> <h4><%= type["product_type"]%></h4>
-      <% if type["product_type"] == "blush"  %>
-       <center> <p class="card-text">Develop a pink tinge in the face.</p>
-       <center><%= link_to "Category", category_Blush_path(:type => "blush"), :class => 'btn btn-primary' %></center>
-      <% elsif  type["product_type"] == "bronzer"%>
-        <center> <p class="card-text">It is a variant of the blush that serves to give a tan or tan to the skin.</p>
-        <center> <%= link_to "Category", category_Bronzer_path(:type => "bronzer"), :class => 'btn btn-primary' %></center>
-      <% elsif  type["product_type"] == "eyebrow"%>
-        <center> <p class="card-text">To give a style of curves to your eyebrows.</p>
-        <center><%= link_to "Category", category_EyeBrow_path(:type => "eyebrow"), :class => 'btn btn-primary' %></center>
-      <% elsif  type["product_type"] == "eyeliner"%>
-         <center> <p class="card-text">It is the cosmetic used to make the outline, a line with strong intensity that defines the eyes.</p>
-         <center><%= link_to "Category", category_EyeLiner_path(:type => "eyeliner"), :class => 'btn btn-primary' %></center>
-      <% elsif  type["product_type"] == "eyeshadow"%>
-         <center> <p class="card-text">The shadows are to give more intensity to your makeup and that your eyes enhance more.</p>
-         <center> <%= link_to "Category", category_EyeShadow_path(:type => "eyeshadow"), :class => 'btn btn-primary' %></center>
-      <% elsif  type["product_type"] == "foundation"%>
-          <center> <p class="card-text">The one that we always apply after the moisturizer as a previous step to face and lip makeup.</p>
-          <center>  <%= link_to "Category", category_Foundation_path(:type => "foundation"), :class => 'btn btn-primary' %></center>
-      <% elsif  type["product_type"] == "lip_liner"%>
-           <center> <p class="card-text">This makeup allows you to delineate your lips to give it a unique shape.</p>
+ <% @ternario = @like.find{|id| id["id_api"] == type["id"].to_s} ? true : false %>
+    <div class="col-sm-6">
+      <div class="card">
+       <div class="card-body1">
+         <center> <h4><%= type["product_type"]%></h4>
+         <% if type["product_type"] == "blush"  %>
+            <center> <p class="card-text">Develop a pink tinge in the face.</p>
+            <center><%= link_to "Category", category_Blush_path(:type => "blush"), :class => 'btn btn-primary' %></center>
+
+         <% if @ternario%>
+           <div id="holder">
+              <div class="box entypo-thumbs-down"> unlike</div>
+           </div>
+         <% else %>
+           <div id="holder">
+             <div class="box entypo-thumbs-up"> Like</div>
+           </div>
+         <% end %>
+       
+         <% elsif  type["product_type"] == "bronzer"%>
+           <center> <p class="card-text">It is a variant of the blush that serves to give a tan or tan to the skin.</p>
+           <center> <%= link_to "Category", category_Bronzer_path(:type => "bronzer"), :class => 'btn btn-primary' %></center>
+           
+         <% if @ternario%>
+            <div id="holder">
+              <div class="box entypo-thumbs-down"> unlike</div>
+           </div>
+         <% else %>
+           <div id="holder">
+             <div class="box entypo-thumbs-up"> Like</div>
+           </div>
+         <% end %>
+       
+         <% elsif  type["product_type"] == "eyebrow"%>
+           <center> <p class="card-text">To give a style of curves to your eyebrows.</p>
+           <center><%= link_to "Category", category_EyeBrow_path(:type => "eyebrow"), :class => 'btn btn-primary' %></center>
+         
+         <% if @ternario%>
+           <div id="holder">
+             <div class="box entypo-thumbs-down"> unlike</div>
+           </div>
+         <% else %>
+           <div id="holder">
+             <div class="box entypo-thumbs-up"> Like</div>
+           </div>
+          <% end %>
+       
+         <% elsif  type["product_type"] == "eyeliner"%>
+           <center> <p class="card-text">It is the cosmetic used to make the outline, a line with strong intensity that defines the eyes.</p>
+           <center><%= link_to "Category", category_EyeLiner_path(:type => "eyeliner"), :class => 'btn btn-primary' %></center>
+         
+         <% if @ternario%>
+           <div id="holder">
+             <div class="box entypo-thumbs-down"> unlike</div>
+           </div>
+         <% else %>
+           <div id="holder">
+             <div class="box entypo-thumbs-up"> Like</div>
+           </div>
+          <% end %>
+       
+          <% elsif  type["product_type"] == "eyeshadow"%>
+           <center> <p class="card-text">The shadows are to give more intensity to your makeup and that your eyes enhance more.</p>
+           <center> <%= link_to "Category", category_EyeShadow_path(:type => "eyeshadow"), :class => 'btn btn-primary' %></center>
+          
+          <% if @ternario%>
+           <div id="holder">
+             <div class="box entypo-thumbs-down"> unlike</div>
+           </div>
+          <% else %>
+           <div id="holder">
+             <div class="box entypo-thumbs-up"> Like</div>
+           </div>
+          <% end %>
+     
+          <% elsif  type["product_type"] == "foundation"%>
+           <center> <p class="card-text">The one that we always apply after the moisturizer as a previous step to face and lip makeup.</p>
+           <center>  <%= link_to "Category", category_Foundation_path(:type => "foundation"), :class => 'btn btn-primary' %></center>
+          
+          <% if @ternario%>
+           <div id="holder">
+             <div class="box entypo-thumbs-down"> unlike</div>
+           </div>
+          <% else %>
+           <div id="holder">
+             <div class="box entypo-thumbs-up"> Like</div>
+           </div>
+          <% end %>
+     
+          <% elsif  type["product_type"] == "lip_liner"%>
+          <center> <p class="card-text">This makeup allows you to delineate your lips to give it a unique shape.</p>
            <center> <%= link_to "Category", category_LipLiner_path(:type => "lip_liner"), :class => 'btn btn-primary' %></center>
-      <% elsif  type["product_type"] == "mascara"%>
+          
+          <% if @ternario%>
+           <div id="holder">
+             <div class="box entypo-thumbs-down"> unlike</div>
+           </div>
+          <% else %>
+           <div id="holder">
+             <div class="box entypo-thumbs-up"> Like</div>
+           </div>
+
+          <% end %>
+      
+          <% elsif  type["product_type"] == "mascara"%>
            <center>  <p  class="card-text">This makeup allows you to give volume to your lashes for a sensational look.</h5>
            <center> <%= link_to "Category", category_Mascara_path(:type => "mascara"), :class => 'btn btn-primary ' %></center> 
-      <% elsif  type["product_type"] == "lipstick"%>
+          
+          <% if @ternario%>
+           <div id="holder">
+             <div class="box entypo-thumbs-down"> unlike</div>
+           </div>
+          <% else %>
+           <div id="holder">
+             <div class="box entypo-thumbs-up"> Like</div>
+           </div>
+          <% end %>
+    
+          <% elsif  type["product_type"] == "lipstick"%>
            <center>  <p  class="card-text">Is a cosmetic product containing pigments and emollients that apply color to the lips.</h5>
            <center> <%= link_to "Category", category_lipstick_path(:type => "lipstick"), :class => 'btn btn-primary ' %></center>                                     
-      <% elsif  type["product_type"] == "nail_polish"%>
+     
+          <% if @ternario%>
+           <div id="holder">
+             <div class="box entypo-thumbs-down"> unlike</div>
+           </div>
+          <% else %>
+           <div id="holder">
+             <div class="box entypo-thumbs-up"> Like</div>
+           </div>
+          <% end %>
+     
+     
+          <% elsif  type["product_type"] == "nail_polish"%>
            <center>  <p  class="card-text">Is a lacquer that can be applied to the human fingernail to decorate and protect the nail.</h5>
            <center> <%= link_to "Category", category_nail_polish_path(:type => "nail_polish"), :class => 'btn btn-primary ' %></center> 
-          <%
-=begin%>
- Creando un boton para el like 
-<%
-=end%>
-          
+
+          <% if @ternario%>
            <div id="holder">
-            <div class="box entypo-thumbs-up"> Like</div>
+             <div class="box entypo-thumbs-down"> unlike</div>
            </div>
-       <%
-=begin%>
- <%= link_to , create_like_path(:id_api => type["id"], :user_id => current_user.id), method: :post%> 
-<%
-=end%>
-      <% end %>
-    </div>
+          <% else %>
+           <div id="holder">
+             <div class="box entypo-thumbs-up"> Like</div>
+           </div>
+          <% end %>
+          <% end %>
+       </div>
+     </div>
+   </div> 
+   <% end %>
   </div>
-</div> 
- <% end %>
-
-</div>
 <% end %>
-
-
-
-
-
 
 <footer>
   <p>Posted by: Maria Jose Chavarria Bravo.</p>
   <p>Contact information: <a href="marita.jose.ch@gmail.com">
   marita.jose.ch@gmail.com</a></p>
 </footer>
-
-
-
 </body> 
-  </html>
+</html>
 
 
 

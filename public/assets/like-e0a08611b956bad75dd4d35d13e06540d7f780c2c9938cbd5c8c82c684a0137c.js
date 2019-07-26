@@ -9,15 +9,3 @@ $(document).ready(function(){
       }
     });
   });
-
-        // $.ajax({
-        //     type:"POST",
-        //     url:"",
-        //     data:{nombre:nombre}
-        //     typedata:text,
-        //     success: function(text){
-        //         alert(text);
-        //         }
-        //     })
-     
- 

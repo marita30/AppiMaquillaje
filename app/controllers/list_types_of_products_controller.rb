@@ -7,7 +7,11 @@ class ListTypesOfProductsController < ApplicationController
     before_action :authenticate_user!
 
     def index
+        
+    # Para mandar a traer los like que se guardan en la base de datos
 
+    @like = Like.where("user_id = ?", current_user.id)
+    
     # mandar a traer todo los productos de la api
     response = RestClient.get "http://makeup-api.herokuapp.com/api/v1/products.json?"
 
@@ -16,12 +20,10 @@ class ListTypesOfProductsController < ApplicationController
 
     # Para mandar a imprimir la llave product_type
     @array =  @array.uniq { |type| type["product_type"] }.reject(&:blank?)
+
 end
 
-
-
-    
- def show 
+def show 
     # Para traer el params de la url response.
     value = params["type"]
     
@@ -91,9 +93,7 @@ end
     @mascara_categories =  @mascara_categories.uniq { |category| category }.reject(&:blank?)
     @nail_polish_categories = @nail_polish_categories.uniq { |category| category }.reject(&:blank?)
 
- end
-
-
+end
           # Metodos para la funcion like
 
 def like
@@ -106,11 +106,9 @@ end
 
 def unlike!
     Like.find_by(id_api: params[:id_api], user: current_user).destroy
-   end
+end
 
 
 #    Stop people liking more than once
-
-
-   
+  
 end
