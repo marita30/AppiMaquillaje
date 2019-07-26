@@ -94,8 +94,10 @@ end
  end
 
 
+          # Metodos para la funcion like
+
 def like
-binding.pry
+
     Like.create( id_api: params[:id_api], user: current_user)
     flash[:success] = "Like Counted!"
     redirect_to  "/types"
@@ -105,6 +107,10 @@ end
 def unlike!
     Like.find_by(id_api: params[:id_api], user: current_user).destroy
    end
-   
+
+
+#    Stop people liking more than once
+
+
    
 end
