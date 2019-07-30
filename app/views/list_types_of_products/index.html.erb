@@ -53,7 +53,9 @@
  <div class="row">
  
 <% @array.each do |type| %>
+
  <% @ternario = @like.find{|id| id["id_api"] == type["id"].to_s} ? true : false %>
+ 
     <div class="col-sm-6">
       <div class="card">
        <div class="card-body1">
@@ -64,7 +66,7 @@
 
          <% if @ternario%>
            <div id="holder">
-              <div class="box entypo-thumbs-down"> unlike</div>
+              <div class="box entypo-thumbs-down"> <%= type["id"] %> unlike</div>
            </div>
          <% else %>
            <div id="holder">
