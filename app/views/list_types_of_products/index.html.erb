@@ -57,9 +57,9 @@
  <% @ternario = @like.find{|id| id["id_api"] == type["id"].to_s} ? true : false %>
  
          <% if @ternario%>
-           <% @buttom = "<div id='holder'><button class='entypo-thumbs-down' type='button' data-btn='#{type['id']}'>Unlike</button></div>".html_safe %>
+           <% @buttom = "<div class='holder'><button class='entypo-thumbs-down' type='button' data-btn='#{type['id']}'>Unlike</button></div>".html_safe %>
          <% else %>
-            <% @buttom = "<div id='holder'><button class='entypo-thumbs-up' type='button' data-btn='#{type['id']}'>like</button></div>".html_safe %>
+            <% @buttom = "<div class='holder'><button class='entypo-thumbs-up' type='button' data-btn='#{type['id']}'>like</button></div>".html_safe %>
          <% end %>
     <div class="col-sm-6">
       <div class="card">

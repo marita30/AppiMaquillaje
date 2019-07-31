@@ -99,13 +99,14 @@ end
 def like
 
     Like.create( id_api: params[:id_api], user: current_user)
-    flash[:success] = "Like Counted!"
-    redirect_to  "/types"
+    
+  
 end
 
 
 def unlike!
     Like.find_by(id_api: params[:id_api], user: current_user).destroy
+    
 end
 
 
