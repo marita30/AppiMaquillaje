@@ -97,16 +97,19 @@ end
           # Metodos para la funcion like
 
 def like
-
+    
     Like.create( id_api: params[:id_api], user: current_user)
+    render json: {text: "create"}
+   
     
   
 end
 
 
 def unlike!
+   
     Like.find_by(id_api: params[:id_api], user: current_user).destroy
-    
+    render json: {text: "delete"}
 end
 
 

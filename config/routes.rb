@@ -24,7 +24,7 @@ Rails.application.routes.draw do
                  # Para el like
 
   post '/create/like', to: 'list_types_of_products#like' 
-  post '/delete/like', to: 'list_types_of_products#unlike'   
+  post '/delete/like', to: 'list_types_of_products#unlike!'   
   
   
            
