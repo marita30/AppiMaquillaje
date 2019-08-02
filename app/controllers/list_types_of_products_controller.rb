@@ -25,6 +25,9 @@ end
 
 def show 
     # Para traer el params de la url response.
+      # Para mandar a traer los like que se guardan en la base de datos
+    @like = Like.where("user_id = ?", current_user.id)
+
     value = params["type"]
     
     @blush_categories = []
@@ -45,34 +48,34 @@ def show
 
     @array.each do |value|
         if value['product_type'] == 'blush' 
-            @blush_categories << value['category']
+            @blush_categories << value
 
         elsif value['product_type'] == 'bronzer'
-            @bronzer_categories << value['category'] 
+            @bronzer_categories << value
         
         elsif value['product_type'] == 'eyebrow'
-            @eyebrow_categories << value['category'] 
+            @eyebrow_categories << value
 
         elsif value['product_type'] == 'eyeliner'
-            @eyeliner_categories << value['category'] 
+            @eyeliner_categories << value
 
         elsif value['product_type'] == 'eyeshadow'
-            @eyeshadow_categories << value['category'] 
+            @eyeshadow_categories << value
 
         elsif value['product_type'] == 'foundation'
-            @foundation_categories << value['category'] 
+            @foundation_categories << value
 
         elsif value['product_type'] == 'lip_liner'
-            @lip_liner_categories << value['category'] 
+            @lip_liner_categories << value
 
         elsif value['product_type'] == 'lipstick'
-            @lipstick_categories << value['category'] 
+            @lipstick_categories << value
 
         elsif value['product_type'] == 'mascara'
-            @mascara_categories << value['category'] 
+            @mascara_categories << value
 
         elsif value['product_type'] == 'nail_polish'
-            @nail_polish_categories << value['category'] 
+            @nail_polish_categories << value
 
 
         end
@@ -98,18 +101,19 @@ end
 
 def like
     
-    Like.create( id_api: params[:id_api], user: current_user)
-    render json: {text: "create"}
-   
+    # Like.create( id_api: params[:id_api], user: current_user)
+    # render json: {text: "create"}
+    binding.pry
     
   
 end
 
 
 def unlike!
+    binding.pry
    
-    Like.find_by(id_api: params[:id_api], user: current_user).destroy
-    render json: {text: "delete"}
+    # Like.find_by(id_api: params[:id_api], user: current_user).destroy
+    # render json: {text: "delete"}
 end
 
 
