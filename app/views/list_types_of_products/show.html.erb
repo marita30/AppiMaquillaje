@@ -44,15 +44,15 @@
   
   <% if @blush_categories %> 
     <% @blush_categories.each do |category| %>
-      
+   
      <% @ternario = @like.find{|id| id["id_api"] == category["id"].to_s} ? true : false %>
       <% if @ternario%>
         <% @buttom = "<div class='holder'><button class='entypo-thumbs-down' type='button' data-btn='#{category['id']}'>unlike</button></div>".html_safe %>
       <% else %>
         <% @buttom = "<div class='holder'><button class='entypo-thumbs-up' type='button' data-btn='#{category['id']}'>like</button></div>".html_safe %>
       <% end %>
-
-        <%= link_to category, type_blush_category_path(:type => "blush", :category => category["category"]), :class => 'btn btn-primary' %>
+        <% next if category["category"].nil?%>     
+        <%= link_to category["category"], type_blush_category_path(:type => "blush", :category => category["category"]), :class => 'btn btn-primary'%>
         <%= @buttom %>
     <%end%>
  <%end%>

@@ -47,8 +47,9 @@ def show
 
 
     @array.each do |value|
-        if value['product_type'] == 'blush' 
+        if value['product_type'] == 'blush'
             @blush_categories << value
+           
 
         elsif value['product_type'] == 'bronzer'
             @bronzer_categories << value
@@ -79,13 +80,10 @@ def show
 
 
         end
-
-
-
     end
     # Para hacer el valor unico , que no se repita y eliminar los valores nill o nulo.
     
-    @blush_categories =  @blush_categories.uniq { |category| category }.reject(&:blank?)
+    @blush_categories =  @blush_categories.uniq { |category| category["category"] }.reject(&:blank?)
     @bronzer_categories =  @bronzer_categories.uniq { |category| category }.reject(&:blank?)
     @eyebrow_categories =  @eyebrow_categories.uniq { |category| category }.reject(&:blank?)
     @eyeliner_categories =  @eyeliner_categories.uniq { |category| category }.reject(&:blank?)
@@ -101,19 +99,18 @@ end
 
 def like
     
-    # Like.create( id_api: params[:id_api], user: current_user)
-    # render json: {text: "create"}
-    binding.pry
+    Like.create( id_api: params[:id_api], user: current_user)
+    render json: {text: "create"}
+  
     
   
 end
 
 
 def unlike!
-    binding.pry
    
-    # Like.find_by(id_api: params[:id_api], user: current_user).destroy
-    # render json: {text: "delete"}
+    Like.find_by(id_api: params[:id_api], user: current_user).destroy
+    render json: {text: "delete"}
 end
 
 
