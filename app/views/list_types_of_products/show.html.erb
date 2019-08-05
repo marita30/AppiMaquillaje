@@ -2,120 +2,154 @@
 <html>
   <head>
     <title>MakeUp</title>
-
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   </head>
 
-  <body>
-
-
+<body>
   <nav id="nav">
-				<ul class="container">
-					<li><a href="/types">Home</a></li>
-				</ul>
+		<ul class="container">
+			<li><a href="/types">Home</a></li>
+		</ul>
 	</nav>
 
-
-  	<div id="header">
-				<span class="logo icon fa-paper-plane"></span>
-				<h1>Welcome to the MAKEUP API</h1>
+  <div id="header">
+		<span class="logo icon fa-paper-plane"></span>
+		<h1>Welcome to the MAKEUP API</h1>
 	</div>
 
-
-<br>
+  <br>
 
   <div>
     <div class="carousel">
-        <ul class="slides">
-            <input type="radio" name="radio-buttons" id="img-1" checked />
-            <li class="slide-container">
-                <div class="slide-image">
-                     <%= link_to image_tag("foundation.png",  :class => 'dock-item1') %>
-                </div> 
-            </li>
-
-            <div class="carousel-dots">
-                 
-            </div>
-        </ul>
+      <ul class="slides">
+      <input type="radio" name="radio-buttons" id="img-1" checked />
+          <li class="slide-container">
+            <div class="slide-image">
+              <%= link_to image_tag("foundation.png",  :class => 'dock-item1') %>
+            </div> 
+          </li>
+          <div class="carousel-dots">   
+          </div>
+      </ul>
     </div>
-</div>
+ </div>
 
-<br>
-<br>
+  <br>
+  <br>
 
-		<div class="container1">
-    <h5>"Porfavor eliga la categoria que mas le guste".</h5>
+<div class="container1">
+ <h5>"Porfavor eliga la categoria que mas le guste".</h5>
   
-       <% if @blush_categories %> 
-        <% @blush_categories.each do |category| %>
-       <%= link_to category, type_blush_category_path(:type => "blush", :category => category), :class => 'btn btn-primary' %>
-        <%end%>
-        <%end%>
+  <% if @blush_categories %> 
+    <% @blush_categories.each do |category| %>
+   
+     <% @ternario = @like.find{|id| id["id_api"] == category["id"].to_s} ? true : false %>
+      <% if @ternario%>
+        <% @buttom = "<div class='holder'><button class='entypo-thumbs-down' type='button' data-btn='#{category['id']}'>unlike</button></div>".html_safe %>
+      <% else %>
+        <% @buttom = "<div class='holder'><button class='entypo-thumbs-up' type='button' data-btn='#{category['id']}'>like</button></div>".html_safe %>
+      <% end %>
+        <% next if category["category"].nil?%>     
+        <%= link_to category["category"], type_blush_category_path(:type => "blush", :category => category["category"]), :class => 'btn btn-primary'%>
+        <%= @buttom %>
+    <%end%>
+ <%end%>
     
-
-
-        <% if @bronzer_categories %> 
-        <% @bronzer_categories.each do |category| %>
-        <%
-=begin%>
- <%= category %>  asi es como estaba antes , lo nuevo es hacerlo dinamico para que 
- lo pueda leer la otra clase y vista products_expensive_and_cheap.
-<%
-=end%>
+  <% if @bronzer_categories %> 
+    <% @bronzer_categories.each do |category| %>
+      <% @ternario = @like.find{|id| id["id_api"] == category["id"].to_s} ? true : false %>
+      <% if @ternario%>
+        <% @buttom = "<div class='holder'><button class='entypo-thumbs-down' type='button' data-btn='#{category['id']}'>unlike</button></div>".html_safe %>
+      <% else %>
+        <% @buttom = "<div class='holder'><button class='entypo-thumbs-up' type='button' data-btn='#{category['id']}'>like</button></div>".html_safe %>
+      <% end %>
         <%= link_to category, type_bronzer_category_path(:type => "bronzer", :category => category), :class => 'btn btn-primary' %>
-
-         <%end%>
-        <%end%>
+        <%= @buttom %>
+    <%end%>
+  <%end%>
     
-
-
-    <% if @eyebrow_categories %> 
- <% @eyebrow_categories.each do |category| %>
-<%= link_to category, type_eyebrow_category_path(:type => "eyebrow", :category => category), :class => 'btn btn-primary' %>
- <%end%>
-<%end%>
+  <% if @eyebrow_categories %> 
+    <% @eyebrow_categories.each do |category| %>
+     <% @ternario = @like.find{|id| id["id_api"] == category["id"].to_s} ? true : false %>
+      <% if @ternario%>
+        <% @buttom = "<div class='holder'><button class='entypo-thumbs-down' type='button' data-btn='#{category['id']}'>unlike</button></div>".html_safe %>
+      <% else %>
+        <% @buttom = "<div class='holder'><button class='entypo-thumbs-up' type='button' data-btn='#{category['id']}'>like</button></div>".html_safe %>
+      <% end %>
+      <%= link_to category, type_eyebrow_category_path(:type => "eyebrow", :category => category), :class => 'btn btn-primary' %>
+      <%= @buttom %>
+    <%end%>
+  <%end%>
  
+  <% if @eyeliner_categories %> 
+   <% @eyeliner_categories.each do |category| %>
+     <% @ternario = @like.find{|id| id["id_api"] == category["id"].to_s} ? true : false %>
+      <% if @ternario%>
+        <% @buttom = "<div class='holder'><button class='entypo-thumbs-down' type='button' data-btn='#{category['id']}'>unlike</button></div>".html_safe %>
+      <% else %>
+        <% @buttom = "<div class='holder'><button class='entypo-thumbs-up' type='button' data-btn='#{category['id']}'>like</button></div>".html_safe %>
+      <% end %>
+      <%= link_to category, type_eyeliner_category_path(:type => "eyeliner", :category => category), :class => 'btn btn-primary' %>
+      <%= @buttom %>
+    <%end%>
+  <%end%>
 
+  <% if @eyeshadow_categories %> 
+   <% @eyeshadow_categories.each do |category| %>
+     <% @ternario = @like.find{|id| id["id_api"] == category["id"].to_s} ? true : false %>
+      <% if @ternario%>
+        <% @buttom = "<div class='holder'><button class='entypo-thumbs-down' type='button' data-btn='#{category['id']}'>unlike</button></div>".html_safe %>
+      <% else %>
+        <% @buttom = "<div class='holder'><button class='entypo-thumbs-up' type='button' data-btn='#{category['id']}'>like</button></div>".html_safe %>
+      <% end %>
+      <%= link_to category, type_eyeshadow_category_path(:type => "eyeshadow", :category => category), :class => 'btn btn-primary' %>
+      <%= @buttom %>
+    <%end%>
+  <%end%>
 
-    <% if @eyeliner_categories %> 
- <% @eyeliner_categories.each do |category| %>
-<%= link_to category, type_eyeliner_category_path(:type => "eyeliner", :category => category), :class => 'btn btn-primary' %>
+  <% if @foundation_categories %> 
+   <% @foundation_categories.each do |category| %>
+     <% @ternario = @like.find{|id| id["id_api"] == category["id"].to_s} ? true : false %>
+      <% if @ternario%>
+        <% @buttom = "<div class='holder'><button class='entypo-thumbs-down' type='button' data-btn='#{category['id']}'>unlike</button></div>".html_safe %>
+      <% else %>
+        <% @buttom = "<div class='holder'><button class='entypo-thumbs-up' type='button' data-btn='#{category['id']}'>like</button></div>".html_safe %>
+      <% end %>
+      <%= link_to category, type_foundation_category_path(:type => "foundation", :category => category), :class => 'btn btn-primary' %>
+      <%= @buttom %>
+   <%end%>
  <%end%>
-<%end%>
 
- <% if @eyeshadow_categories %> 
- <% @eyeshadow_categories.each do |category| %>
-<%= link_to category, type_eyeshadow_category_path(:type => "eyeshadow", :category => category), :class => 'btn btn-primary' %>
+
+ <% if @lip_liner_categories %> 
+   <% @lip_liner_categories.each do |category| %>
+     <% @ternario = @like.find{|id| id["id_api"] == category["id"].to_s} ? true : false %>
+      <% if @ternario%>
+        <% @buttom = "<div class='holder'><button class='entypo-thumbs-down' type='button' data-btn='#{category['id']}'>unlike</button></div>".html_safe %>
+      <% else %>
+        <% @buttom = "<div class='holder'><button class='entypo-thumbs-up' type='button' data-btn='#{category['id']}'>like</button></div>".html_safe %>
+      <% end %>
+      <%= link_to category, type_lipliner_category_path(:type => "lip_liner", :category => category), :class => 'btn btn-primary' %>
+      <%= @buttom %>
+   <%end%>
  <%end%>
-<%end%>
 
-<% if @foundation_categories %> 
- <% @foundation_categories.each do |category| %>
-<%= link_to category, type_foundation_category_path(:type => "foundation", :category => category), :class => 'btn btn-primary' %>
+
+ <% if @mascara_categories %> 
+   <% @mascara_categories.each do |category| %>
+     <% @ternario = @like.find{|id| id["id_api"] == category["id"].to_s} ? true : false %>
+      <% if @ternario%>
+        <% @buttom = "<div class='holder'><button class='entypo-thumbs-down' type='button' data-btn='#{category['id']}'>unlike</button></div>".html_safe %>
+      <% else %>
+        <% @buttom = "<div class='holder'><button class='entypo-thumbs-up' type='button' data-btn='#{category['id']}'>like</button></div>".html_safe %>
+      <% end %>
+      <%= link_to category, type_mascara_category_path(:type => "mascara", :category => category), :class => 'btn btn-primary' %>
+       <%= @buttom %>
+   <%end%>
  <%end%>
-<%end%>
-
-
-<% if @lip_liner_categories %> 
- <% @lip_liner_categories.each do |category| %>
-<%= link_to category, type_lipliner_category_path(:type => "lip_liner", :category => category), :class => 'btn btn-primary' %>
- <%end%>
-<%end%>
-
-
-<% if @mascara_categories %> 
- <% @mascara_categories.each do |category| %>
-<%= link_to category, type_mascara_category_path(:type => "mascara", :category => category), :class => 'btn btn-primary' %>
- <%end%>
-<%end%>
-
 </div>
-
-
 
 </body>
 </html>
