@@ -65,7 +65,8 @@
       <% else %>
         <% @buttom = "<div class='holder'><button class='entypo-thumbs-up' type='button' data-btn='#{category['id']}'>like</button></div>".html_safe %>
       <% end %>
-        <%= link_to category, type_bronzer_category_path(:type => "bronzer", :category => category), :class => 'btn btn-primary' %>
+        <% next if category["category"].nil?%> 
+        <%= link_to category["category"], type_bronzer_category_path(:type => "bronzer", :category => category), :class => 'btn btn-primary' %>
         <%= @buttom %>
     <%end%>
   <%end%>
@@ -78,8 +79,9 @@
       <% else %>
         <% @buttom = "<div class='holder'><button class='entypo-thumbs-up' type='button' data-btn='#{category['id']}'>like</button></div>".html_safe %>
       <% end %>
-      <%= link_to category, type_eyebrow_category_path(:type => "eyebrow", :category => category), :class => 'btn btn-primary' %>
-      <%= @buttom %>
+       <% next if category["category"].nil?%> 
+       <%= link_to category["category"], type_eyebrow_category_path(:type => "eyebrow", :category => category), :class => 'btn btn-primary' %>
+       <%= @buttom %>
     <%end%>
   <%end%>
  
@@ -91,8 +93,9 @@
       <% else %>
         <% @buttom = "<div class='holder'><button class='entypo-thumbs-up' type='button' data-btn='#{category['id']}'>like</button></div>".html_safe %>
       <% end %>
-      <%= link_to category, type_eyeliner_category_path(:type => "eyeliner", :category => category), :class => 'btn btn-primary' %>
-      <%= @buttom %>
+       <% next if category["category"].nil?%> 
+       <%= link_to category["category"], type_eyeliner_category_path(:type => "eyeliner", :category => category), :class => 'btn btn-primary' %>
+       <%= @buttom %>
     <%end%>
   <%end%>
 
@@ -104,8 +107,9 @@
       <% else %>
         <% @buttom = "<div class='holder'><button class='entypo-thumbs-up' type='button' data-btn='#{category['id']}'>like</button></div>".html_safe %>
       <% end %>
-      <%= link_to category, type_eyeshadow_category_path(:type => "eyeshadow", :category => category), :class => 'btn btn-primary' %>
-      <%= @buttom %>
+       <% next if category["category"].nil?%>
+       <%= link_to category["category"], type_eyeshadow_category_path(:type => "eyeshadow", :category => category), :class => 'btn btn-primary' %>
+       <%= @buttom %>
     <%end%>
   <%end%>
 
@@ -117,8 +121,9 @@
       <% else %>
         <% @buttom = "<div class='holder'><button class='entypo-thumbs-up' type='button' data-btn='#{category['id']}'>like</button></div>".html_safe %>
       <% end %>
-      <%= link_to category, type_foundation_category_path(:type => "foundation", :category => category), :class => 'btn btn-primary' %>
-      <%= @buttom %>
+       <% next if category["category"].nil?%>
+       <%= link_to category["category"], type_foundation_category_path(:type => "foundation", :category => category), :class => 'btn btn-primary' %>
+       <%= @buttom %>
    <%end%>
  <%end%>
 
@@ -131,8 +136,9 @@
       <% else %>
         <% @buttom = "<div class='holder'><button class='entypo-thumbs-up' type='button' data-btn='#{category['id']}'>like</button></div>".html_safe %>
       <% end %>
-      <%= link_to category, type_lipliner_category_path(:type => "lip_liner", :category => category), :class => 'btn btn-primary' %>
-      <%= @buttom %>
+       <% next if category["category"].nil?%>
+       <%= link_to category["category"], type_lipliner_category_path(:type => "lip_liner", :category => category), :class => 'btn btn-primary' %>
+       <%= @buttom %>
    <%end%>
  <%end%>
 
@@ -145,7 +151,8 @@
       <% else %>
         <% @buttom = "<div class='holder'><button class='entypo-thumbs-up' type='button' data-btn='#{category['id']}'>like</button></div>".html_safe %>
       <% end %>
-      <%= link_to category, type_mascara_category_path(:type => "mascara", :category => category), :class => 'btn btn-primary' %>
+       <% next if category["category"].nil?%> 
+       <%= link_to category["category"], type_mascara_category_path(:type => "mascara", :category => category), :class => 'btn btn-primary' %>
        <%= @buttom %>
    <%end%>
  <%end%>

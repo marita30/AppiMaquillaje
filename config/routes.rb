@@ -42,7 +42,7 @@ Rails.application.routes.draw do
   get '/type/lipliner/category', to: 'products_expensive_and_cheap#index'
   get '/type/mascara/category', to: 'products_expensive_and_cheap#index'
 
- 
+ get '/perfil', to: 'perfil_user#show'
   
 
 end
