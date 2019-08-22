@@ -18,8 +18,21 @@ Rails.application.routes.draw do
   get '/category/Foundation', to: 'list_types_of_products#show'
   get '/category/LipLiner', to: 'list_types_of_products#show'
   get '/category/Mascara', to: 'list_types_of_products#show'
+  get '/category/lipstick', to: 'list_types_of_products#show'
+  get '/category/nail_polish', to: 'list_types_of_products#show'
 
-# rutas para el otro metodo.
+                 # Para el like
+
+  post '/create/like', to: 'list_types_of_products#like' 
+  post '/delete/like', to: 'list_types_of_products#unlike!'   
+  
+  
+           
+
+                 
+  
+
+# rutas para el otro metodo index.
   get '/type/blush/category', to: 'products_expensive_and_cheap#index'
   get '/type/bronzer/category', to: 'products_expensive_and_cheap#index'
   get '/type/eyebrow/category', to: 'products_expensive_and_cheap#index'
@@ -29,7 +42,7 @@ Rails.application.routes.draw do
   get '/type/lipliner/category', to: 'products_expensive_and_cheap#index'
   get '/type/mascara/category', to: 'products_expensive_and_cheap#index'
 
- 
+ get '/perfil', to: 'perfil_user#show'
   
 
 end

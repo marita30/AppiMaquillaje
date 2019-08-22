@@ -1,0 +1,646 @@
+@import url(http://weloveiconfonts.com/api/?family=entypo);
+/* entypo */
+/* line 27, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+[class*="entypo-"]:before {
+  font-family: 'entypo', sans-serif;
+}
+
+/* line 31, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+div.box {
+  text-align: center;
+  width: 55px;
+  background-color: #eee;
+  border-radius: 3px;
+  box-shadow: 0 0 10px #000;
+  padding: 3px;
+}
+
+/* line 39, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+div.box {
+  font-family: arial;
+  font-size: 12px;
+  text-decoration: none;
+  color: #000;
+}
+
+/* line 45, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+div.box:hover {
+  cursor: pointer;
+  background-color: #fdd;
+}
+
+/* line 50, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+a.btn.btn-primary {
+  color: white;
+  background-image: linear-gradient(black, gray);
+  border: #282828;
+  margin: 0 auto;
+  display: inline-block;
+}
+
+/* line 65, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+div.card-body1 {
+  border-color: chocolate;
+  border-style: groove;
+  background-image: linear-gradient(#edeff0, silver);
+  margin-bottom: 10px;
+}
+
+/* line 75, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+footer {
+  display: block;
+}
+
+/* line 79, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+.container1 {
+  background-image: linear-gradient(#edeff0, silver);
+  height: 20em;
+}
+
+/* line 94, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+.carousel {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+/* line 99, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+ul.slides {
+  display: block;
+  position: relative;
+  height: 600px;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style: none;
+}
+
+/* line 111, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+.slide-image {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  opacity: 0;
+  transition: all .7s ease-in-out;
+}
+
+/* line 122, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+.slide-image img {
+  width: auto;
+  min-width: 100%;
+  height: 100%;
+}
+
+/* line 128, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+input:checked + .slide-container .slide-image {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 1s ease-in-out;
+}
+
+/* line 134, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+input#img-1:checked ~ .carousel-dots label#img-dot-1 {
+  opacity: 1;
+}
+
+/* line 139, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+input:checked + .slide-container .nav label {
+  display: block;
+}
+
+/* line 144, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+html, body, div, span, applet, object,
+iframe, h1, h2, h3, h6, p, blockquote,
+pre, a, abbr, acronym, address, big, cite,
+code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b,
+u, i, center, dl, dt, dd, ol, ul, li, fieldset,
+form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside,
+canvas, details, embed, figure, figcaption,
+footer, header, hgroup, menu, nav, output, ruby,
+section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 164, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 169, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+body {
+  line-height: 1;
+  background-image: linear-gradient(#ffe4e1, #e3f7f0);
+}
+
+/* line 174, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 178, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+blockquote, q {
+  quotes: none;
+}
+/* line 181, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 188, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+h1, h4 {
+  color: black;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-transform: capitalize;
+}
+
+/* line 194, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+body {
+  -webkit-text-size-adjust: none;
+}
+
+/* Basic */
+/* line 201, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+html {
+  box-sizing: border-box;
+}
+
+/* line 205, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* line 209, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 214, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+body, input, select, textarea {
+  color: _palette(fg);
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 16pt;
+  font-weight: 400;
+  line-height: 1.75em;
+}
+
+/* line 222, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+a {
+  border-bottom: dotted 1px;
+  color: _palette(accent1, bg);
+  text-decoration: none;
+}
+/* line 228, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+a:hover {
+  border-bottom-color: transparent;
+}
+
+/* line 233, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+strong, b {
+  font-weight: 600;
+  color: _palette(fg-bold);
+}
+
+/* line 238, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+em, i {
+  font-style: italic;
+}
+
+/* line 242, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+p, ul, ol, dl, table, blockquote, form {
+  margin: 0 0 2em 0;
+}
+
+/* line 246, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+h1, h2, h3, h4, h5, h6 {
+  color: _palette(fg-bold);
+  font-weight: 700;
+  letter-spacing: 0.125em;
+  line-height: 1.75em;
+  margin-bottom: 1em;
+  text-transform: uppercase;
+  text-align: center;
+}
+/* line 255, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* line 261, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+h2 {
+  font-size: 1.75em;
+}
+
+/* line 265, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+h3 {
+  font-size: 1.5em;
+}
+
+/* line 269, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+sub {
+  font-size: 0.8em;
+  position: relative;
+  top: 0.5em;
+}
+
+/* line 275, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+sup {
+  font-size: 0.8em;
+  position: relative;
+  top: -0.5em;
+}
+
+/* line 281, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+hr {
+  border: 0;
+  border-top: solid 1px _palette(border);
+  margin-bottom: 1.5em;
+}
+
+/* line 287, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+blockquote {
+  border-left: solid 0.5em _palette(border);
+  font-style: italic;
+  padding: 1em 0 1em 2em;
+}
+
+/* Container */
+/* line 295, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+.container {
+  margin: 0 auto;
+  max-width: 100%;
+  width: 51em;
+}
+/* line 300, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+.container.medium {
+  width: 38.25em;
+}
+/* line 305, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+.container.medium {
+  width: 36em;
+}
+/* line 311, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+.container.medium {
+  width: 71.25%;
+}
+
+/* line 315, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+header {
+  text-align: center;
+}
+/* line 318, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+header p {
+  position: relative;
+  top: -1em;
+  color: _palette(fg-light);
+  text-transform: uppercase;
+  letter-spacing: 0.075em;
+}
+/* line 326, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+header.major {
+  border-bottom-width: 1px;
+  border-color: _palette(border);
+  border-style: solid;
+  border-top-width: 1px;
+  margin-bottom: 6em;
+  padding: 4em 0;
+  position: relative;
+}
+/* line 335, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+header.major:before, header.major:after {
+  background: _palette(border);
+  content: '';
+  display: block;
+  height: 1px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+/* line 346, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+header.major:before {
+  top: 10px;
+}
+/* line 350, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+header.major:after {
+  bottom: 10px;
+}
+/* line 355, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+header.major p {
+  top: 0;
+  margin: 1.5em 0 0 0;
+  padding: 1.5em 1.5em 0 1.5em;
+  font-size: 1.5em;
+  line-height: 1.75em;
+  border-top: solid 1px _palette(border);
+  display: inline-block;
+}
+/* line 365, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+header.major.last {
+  border-bottom: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+/* line 370, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+header.major.last:after {
+  display: none;
+}
+/* line 374, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+header.major.last h2 {
+  margin-bottom: 1em;
+}
+
+/* line 381, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+footer {
+  text-align: center;
+}
+/* line 384, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+footer.major {
+  border-bottom-width: 1px;
+  border-color: _palette(border);
+  border-style: solid;
+  border-top-width: 1px;
+  margin-top: 6em;
+  padding: 4em 0;
+  position: relative;
+}
+/* line 393, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+footer.major:before, footer.major:after {
+  background: _palette(border);
+  content: '';
+  display: block;
+  height: 1px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+/* line 404, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+footer.major:before {
+  top: 10px;
+}
+/* line 408, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+footer.major:after {
+  bottom: 10px;
+}
+
+/* Header */
+/* line 415, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+#header {
+  background-attachment: scroll,							scroll,					fixed;
+  background-image: url("images/top-3200.svg"), url("images/overlay.png"), url("../../images/header.jpg");
+  background-position: bottom center,					top left,				center center;
+  background-repeat: repeat-x,						repeat,					no-repeat;
+  background-size: 3200px 460px,					auto,					cover;
+  color: _palette(accent2, fg);
+  padding: 10em 0 20em 0;
+  position: relative;
+  text-align: center;
+}
+/* line 426, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+#header:before, #header:after {
+  background: _palette(border);
+  content: '';
+  left: 50%;
+  position: absolute;
+  width: 1px;
+  z-index: 0;
+}
+/* line 436, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+#header:before {
+  height: calc(100% - 50px);
+  opacity: 0.15;
+  top: 0;
+}
+/* line 442, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+#header:after {
+  bottom: 0;
+  height: 50px;
+}
+/* line 447, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+#header a {
+  border-bottom-color: _palette(accent2, fg-light);
+  color: _palette(accent2, fg);
+}
+/* line 451, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+#header a:hover {
+  border-bottom-color: transparent;
+  color: _palette(accent1, bg);
+}
+/* line 457, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+#header strong, #header b {
+  color: _palette(accent2, fg-bold);
+}
+/* line 461, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+#header .logo {
+  background: _palette(accent1, bg);
+  border-radius: 100%;
+  color: _palette(accent1, fg-bold);
+  cursor: default;
+  display: inline-block;
+  font-size: 2.25em;
+  height: 2.35em;
+  line-height: 2.35em;
+  margin: 0 0 0.75em 0;
+  text-align: center;
+  width: 2.35em;
+}
+/* line 474, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+#header .logo.fa-paper-plane-o:before {
+  left: -0.075em;
+  position: relative;
+}
+
+/* Footer */
+/* line 487, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+h3 {
+  color: black;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-shadow: 0px 20px 30px purple;
+}
+
+/* line 492, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+p {
+  color: black;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-shadow: 0px 20px 30px purple;
+}
+
+/* Main */
+/* line 500, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+#main {
+  padding: 6em 0 5em 0;
+  position: relative;
+  z-index: 1;
+}
+/* line 505, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+#main:before {
+  background: _palette(border);
+  content: '';
+  height: 100%;
+  left: 50%;
+  position: absolute;
+  top: 0;
+  width: 1px;
+  z-index: -1;
+}
+/* line 516, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+#main header.major,
+#main footer.major {
+  background: _palette(bg);
+}
+
+/* line 524, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+h2 {
+  color: black;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-shadow: 0px 20px 30px purple;
+}
+
+/* Section/Article */
+/* line 533, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+header.major {
+  margin-bottom: 4em;
+  padding: 3em 0;
+}
+/* line 537, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+header.major p {
+  font-size: 1.15em;
+}
+
+/* line 544, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+footer.major {
+  margin-top: 4em;
+  padding: 3em 0;
+}
+
+/* Header */
+/* line 551, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+#header {
+  background-image: url("images/top-1280.svg"), url("images/overlay.png"), url("../../images/header.jpg");
+  background-size: 1280px 184px,						auto,							cover;
+  padding: 3em 0 7em 0;
+}
+/* line 556, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+#header:before {
+  height: calc(100% - 20px);
+}
+/* line 560, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+#header:after {
+  height: 20px;
+}
+/* line 566, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+#header h1 {
+  font-size: 1.25em;
+}
+/* line 570, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+#header p {
+  font-size: 1em;
+}
+
+/* line 576, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+#nav {
+  background-image: linear-gradient(black, gray);
+  text-align: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 10000;
+  cursor: default;
+  height: 3.5em;
+  line-height: 3.5em;
+}
+
+/* line 589, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+#nav ul {
+  margin-bottom: 0;
+  list-style: none;
+  padding-left: 0;
+}
+
+/* line 595, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+#nav li {
+  display: inline-block;
+  padding-left: 0;
+}
+
+/* line 600, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+#nav a {
+  -moz-transition: background-color .2s ease-in-out;
+  -webkit-transition: background-color .2s ease-in-out;
+  -ms-transition: background-color .2s ease-in-out;
+  transition: background-color .2s ease-in-out;
+  position: relative;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  outline: 0;
+  font-weight: 600;
+  border-radius: 8px;
+  color: #fff;
+  height: 2.5em;
+  line-height: 2.5em;
+  padding: 0 1.25em;
+}
+
+/* line 618, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+#nav a:hover {
+  color: #fff !important;
+  background: #383838;
+}
+
+/* line 623, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+#nav a.active {
+  background: #484848;
+}
+
+/* line 627, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+#nav a.active:before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -0.6em;
+  left: 50%;
+  margin-left: -0.75em;
+  border-left: solid 0.75em transparent;
+  border-right: solid 0.75em transparent;
+  border-top: solid 0.6em #282828;
+}
+
+/* line 640, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/index.scss */
+.dock-item {
+  border-radius: 8em;
+  box-shadow: 0px 20px 30px gray;
+}
+/* line 1, /home/mj/Desktop/Maquillaje/app/assets/stylesheets/products_expensive_and_cheap/index.scss */
+table, th, td {
+  border: 1px solid black;
+  width: 50%;
+  display: center;
+  margin: auto;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+
+ */
+
