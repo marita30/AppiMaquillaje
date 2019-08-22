@@ -1,11 +1,11 @@
 source 'https://rubygems.org'
 
-ruby '2.2.3'
+ruby '2.5.0'
 #Utilizando la gem devise para crear el login y los usuarios.
 gem 'devise'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.8'
+gem 'rails', '>=4.2.7'
 # Cambiando sqlite por postgred
 gem 'pg', '~> 0.18.4'
 # Use SCSS for stylesheets
