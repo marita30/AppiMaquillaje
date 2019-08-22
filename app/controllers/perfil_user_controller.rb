@@ -16,7 +16,6 @@ class PerfilUserController < ApplicationController
         end
        
         @elements_with_like = @elements_with_like.flatten
-        binding.pry
         @elements_with_like =  @elements_with_like.uniq { |record| record["id"].to_i }.reject(&:blank?)
        
 
